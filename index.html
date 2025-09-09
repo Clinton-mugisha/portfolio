@@ -3,10 +3,366 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clinton Mugisha - Software Developer & UI/UX Designer">
+    <meta name="keywords" content="Software Developer, UI/UX Designer, Clinton Mugisha, Clinton, Mugisha, Uganda, Top Software Developer, Top UI/UX Designer">
+    <meta name="author" content="Clinton Mugisha">
     <title>Clinton Mugisha - Software Developer & UI/UX Designer</title>
     <link rel="stylesheet" href="styles_homepage.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.projects {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Modified projects grid for 4 columns */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+@media (min-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+}
+
+.project-link {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    background: #667eea;
+    color: white;
+    transform: scale(1.1);
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.project-info p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tech span {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Mobile Apps Section Styles */
+.mobile-apps {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-apps::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>') repeat;
+    animation: float 20s infinite linear;
+}
+
+@keyframes float {
+    0% { transform: translateX(-100px) translateY(-100px); }
+    100% { transform: translateX(100px) translateY(100px); }
+}
+
+.mobile-apps .section-title {
+    color: white;
+}
+
+.mobile-apps .section-title:after {
+    background: white;
+}
+
+.mobile-apps .section-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.mobile-apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.mobile-app-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-app-card:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.mobile-app-card:hover:before {
+    opacity: 1;
+    animation: shine 0.8s ease-in-out;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.mobile-app-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-app-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+.mobile-app-card:hover .mobile-app-icon {
+    background: white;
+    color: #667eea;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.mobile-app-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.mobile-app-card p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.mobile-app-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    color: #667eea;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-app-link:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.mobile-app-link:hover:before {
+    left: 100%;
+}
+
+.mobile-app-link:hover {
+    background: rgba(255, 255, 255, 0.95);
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mobile-apps {
+        padding: 60px 0;
+    }
+
+    .mobile-apps-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .mobile-app-card {
+        padding: 30px 20px;
+    }
+}
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -374,11 +730,10 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/ecom.png" alt="E-Commerce Platform" class="project-image ">
+                        <img src="images/ecom.png" alt="E-Commerce Platform" class="project-image">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="https://ecom-seven-lake.vercel.app/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <!-- <a href="#" class="project-link"><i class="fab fa-github"></i></a> -->
                             </div>
                         </div>
                     </div>
@@ -396,7 +751,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/adrian.png" alt="Adrian Logistics AI" class="project-image ">
+                        <img src="images/adrian.png" alt="Adrian Logistics AI" class="project-image">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="http://ai.ride-link.com/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
@@ -418,7 +773,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/tracking.png" alt="Package Tracking" class="project-image ">
+                        <img src="images/tracking.png" alt="Package Tracking" class="project-image">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="https://tracking.ride-link.com/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
@@ -439,7 +794,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/tax.png" alt="Tax Calculator" class="project-image ">
+                        <img src="images/tax.png" alt="Tax Calculator" class="project-image">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="https://tax.ride-link.com/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
@@ -457,9 +812,10 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/infinity.png" alt="Infinity Tours & Travel " class="project-image ">
+                        <img src="images/infinity.png" alt="Infinity Tours & Travel" class="project-image">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="https://www.infinitytoursandtravel.com/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
@@ -467,7 +823,7 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Infinity Tours & Travel </h3>
+                        <h3>Infinity Tours & Travel</h3>
                         <p>Was Contracted by Infinity Tours & Travel to develop a website for their business and this was the result</p>
                         <div class="project-tech">
                             <span>HTML</span>
@@ -476,9 +832,10 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/avias.png" alt="African Visual Artist Associate" class="project-image ">
+                        <img src="images/avias.png" alt="African Visual Artist Associate" class="project-image">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="https://www.africanvisualartistsassociate.org/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
@@ -493,10 +850,50 @@
                         </div>
                     </div>
                 </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/ridelink.jpeg" alt="Ridelink" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.ridelink.app&hl=en" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Ridelink App</h3>
+                        <p>This is the Ridelink Mobile Application that connects clients to trusted transporters</p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Firebase</span>
+                            <span>Rest APIs</span>
+                            <span>Google Maps</span>
+                            <span>IOTech</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/tagtail.jpeg" alt="Tagtail" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.trailtag.app&hl=en" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Tagtail App</h3>
+                        <p>This is the Tagtail Mobile Application that enables clients to track transporters in real time so as to stay in the loop of their cargo</p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Firebase</span>
+                            <span>Rest APIs</span>
+                            <span>Google Maps</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
