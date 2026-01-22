@@ -41,7 +41,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Animated Counter for Stats
-const animateCounters = () => {
+ animateCounters = () => {
     const counters = document.querySelectorAll('.stat-number');
     
     counters.forEach(counter => {

@@ -16,10 +16,48 @@
     align-items: center;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #14b8a6 0%, #0d9488 50%, #14b8a6 100%);
+    background: linear-gradient(135deg,
+            #14b8a6 0%,
+            #0d9488 25%,
+            #10b981 50%,
+            #14b8a6 75%,
+            #0f766e 100%);
     background-size: 400% 400%;
-    animation: gradientShift 8s ease-in-out infinite;
+    animation: meshFlow 20s ease infinite;
     padding: var(--space-8) 0;
+}
+
+/* Animated Mesh Gradient Overlay */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(ellipse at 10% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 90% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(6, 182, 212, 0.1) 0%, transparent 60%);
+    z-index: 0;
+}
+
+/* Floating Blob Accent */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle,
+            rgba(255, 255, 255, 0.08) 0%,
+            rgba(6, 182, 212, 0.05) 40%,
+            transparent 70%);
+    border-radius: 50%;
+    filter: blur(60px);
+    animation: blobFloat 15s ease-in-out infinite;
+    z-index: 0;
 }
 
 /* Advanced Background Elements */
@@ -38,47 +76,50 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
-        radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
-        radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px);
-    background-size: 100px 100px, 60px 60px, 80px 80px;
-    animation: patternMove 20s linear infinite;
+    background: none;
+}
+
+.bg-pattern::before {
+    display: none;
+}
+
+.bg-pattern::after {
+    display: none;
 }
 
 .bg-gradient-orb {
     position: absolute;
     border-radius: 50%;
-    filter: blur(40px);
-    opacity: 0.6;
-    animation: orbFloat 6s ease-in-out infinite;
+    filter: blur(80px);
+    opacity: 0.4;
+    animation: orbFloat 12s ease-in-out infinite;
 }
 
 .orb-1 {
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(20, 184, 166, 0.3), rgba(20, 184, 166, 0.1));
-    top: 10%;
-    left: 10%;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+    top: -5%;
+    left: -5%;
     animation-delay: 0s;
 }
 
 .orb-2 {
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, rgba(20, 184, 166, 0.2), rgba(20, 184, 166, 0.05));
-    top: 60%;
-    right: 15%;
-    animation-delay: 2s;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.15), transparent);
+    top: 40%;
+    right: -5%;
+    animation-delay: 3s;
 }
 
 .orb-3 {
-    width: 150px;
-    height: 150px;
-    background: radial-gradient(circle, rgba(20, 184, 166, 0.25), rgba(20, 184, 166, 0.08));
-    bottom: 20%;
-    left: 20%;
-    animation-delay: 4s;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent);
+    bottom: -10%;
+    left: 30%;
+    animation-delay: 6s;
 }
 
 /* Geometric Shapes */
@@ -100,21 +141,23 @@
 .shape-1 {
     width: 80px;
     height: 80px;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.15), rgba(255, 159, 67, 0.1));
     top: 15%;
     left: 5%;
     border-radius: 20px;
     animation-delay: 0s;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .shape-2 {
     width: 60px;
     height: 60px;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    background: linear-gradient(135deg, rgba(78, 205, 196, 0.15), rgba(99, 102, 241, 0.1));
     top: 70%;
     right: 10%;
     border-radius: 50%;
     animation-delay: 1s;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .shape-3 {
@@ -122,7 +165,7 @@
     height: 0;
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
-    border-bottom: 52px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 52px solid rgba(255, 159, 67, 0.1);
     top: 40%;
     left: 15%;
     animation-delay: 2s;
@@ -131,21 +174,23 @@
 .shape-4 {
     width: 70px;
     height: 70px;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(78, 205, 196, 0.1));
     bottom: 30%;
     right: 20%;
     transform: rotate(45deg);
     animation-delay: 3s;
+    box-shadow: 0 0 25px rgba(255, 0, 128, 0.2);
 }
 
 .shape-5 {
     width: 50px;
     height: 50px;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    background: linear-gradient(45deg, rgba(0, 255, 157, 0.2), rgba(0, 212, 255, 0.1));
     top: 25%;
     right: 25%;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     animation-delay: 4s;
+    filter: drop-shadow(0 0 15px rgba(0, 255, 157, 0.2));
 }
 
 /* Enhanced Hero Container */
@@ -304,9 +349,17 @@
     animation: fadeInUp 0.8s ease-out var(--delay) both;
 }
 
-.achievement:nth-child(1) { --delay: 0.8s; }
-.achievement:nth-child(2) { --delay: 1s; }
-.achievement:nth-child(3) { --delay: 1.2s; }
+.achievement:nth-child(1) {
+    --delay: 0.8s;
+}
+
+.achievement:nth-child(2) {
+    --delay: 1s;
+}
+
+.achievement:nth-child(3) {
+    --delay: 1.2s;
+}
 
 .achievement:hover {
     transform: translateY(-4px);
@@ -469,10 +522,21 @@
     box-shadow: var(--shadow-md);
 }
 
-.social-link-hero.github:hover { color: #333; }
-.social-link-hero.linkedin:hover { color: #0077b5; }
-.social-link-hero.twitter:hover { color: #1da1f2; }
-.social-link-hero.dribbble:hover { color: #ea4c89; }
+.social-link-hero.github:hover {
+    color: #333;
+}
+
+.social-link-hero.linkedin:hover {
+    color: #0077b5;
+}
+
+.social-link-hero.twitter:hover {
+    color: #1da1f2;
+}
+
+.social-link-hero.dribbble:hover {
+    color: #ea4c89;
+}
 
 /* ===============================================
    ENHANCED HERO VISUAL SIDE
@@ -491,6 +555,9 @@
     width: 100%;
     max-width: 500px;
     height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Profile Main */
@@ -499,7 +566,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 10;
+    z-index: 20;
 }
 
 .profile-image-container {
@@ -514,14 +581,13 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
-    backdrop-filter: blur(20px);
-    border: 3px solid rgba(255, 255, 255, 0.3);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    border: 3px solid rgba(255, 255, 255, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    animation: profilePulse 3s ease-in-out infinite;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
 .image-placeholder {
@@ -576,6 +642,8 @@
 
 .orbit {
     position: absolute;
+    top: 50%;
+    left: 50%;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     animation: orbitRotate 20s linear infinite;
@@ -584,16 +652,16 @@
 .orbit-1 {
     width: 300px;
     height: 300px;
-    top: 50px;
-    left: 50px;
+    margin-left: -150px;
+    margin-top: -150px;
     animation-duration: 15s;
 }
 
 .orbit-2 {
     width: 350px;
     height: 350px;
-    top: 25px;
-    left: 25px;
+    margin-left: -175px;
+    margin-top: -175px;
     animation-duration: 20s;
     animation-direction: reverse;
 }
@@ -601,16 +669,16 @@
 .orbit-3 {
     width: 320px;
     height: 320px;
-    top: 40px;
-    left: 40px;
+    margin-left: -160px;
+    margin-top: -160px;
     animation-duration: 18s;
 }
 
 .orbit-4 {
     width: 280px;
     height: 280px;
-    top: 60px;
-    left: 60px;
+    margin-left: -140px;
+    margin-top: -140px;
     animation-duration: 16s;
     animation-direction: reverse;
 }
@@ -618,35 +686,37 @@
 .orbit-5 {
     width: 330px;
     height: 330px;
-    top: 35px;
-    left: 35px;
+    margin-left: -165px;
+    margin-top: -165px;
     animation-duration: 22s;
 }
 
 .orbit-6 {
     width: 290px;
     height: 290px;
-    top: 55px;
-    left: 55px;
+    margin-left: -145px;
+    margin-top: -145px;
     animation-duration: 14s;
     animation-direction: reverse;
 }
+
 .orbit-7 {
-    width: 290px;
-    height: 290px;
-    top: 55px;
-    left: 55px;
+    width: 260px;
+    height: 260px;
+    margin-left: -130px;
+    margin-top: -130px;
     animation-duration: 18s;
     animation-direction: reverse;
 }
+
 .orbit-8 {
-    width: 290px;
-    height: 290px;
-    top: 55px;
-    left: 55px;
+    width: 340px;
+    height: 340px;
+    margin-left: -170px;
+    margin-top: -170px;
     animation-duration: 20s;
-    animation-direction: 11;
 }
+
 .tech-icon {
     position: absolute;
     width: 50px;
@@ -670,21 +740,77 @@
     box-shadow: var(--shadow-lg);
 }
 
-.orbit-1 .tech-icon { top: -25px; left: calc(50% - 25px); animation-delay: 0s; }
-.orbit-2 .tech-icon { top: -25px; left: calc(50% - 25px); animation-delay: 0.5s; }
-.orbit-3 .tech-icon { top: -25px; left: calc(50% - 25px); animation-delay: 1s; }
-.orbit-4 .tech-icon { top: -25px; left: calc(50% - 25px); animation-delay: 1.5s; }
-.orbit-5 .tech-icon { top: -25px; left: calc(50% - 25px); animation-delay: 2s; }
-.orbit-6 .tech-icon { top: -25px; left: calc(50% - 25px); animation-delay: 2.5s; }
-.orbit-7 .tech-icon { top: -25px; left: calc(50% - 25px); animation-delay: 3s; }
-.orbit-8 .tech-icon { top: -25px; left: calc(50% - 25px); animation-delay: 3.5s; }
+.orbit-1 .tech-icon {
+    top: -25px;
+    left: calc(50% - 25px);
+    animation-delay: 0s;
+}
 
-.react-icon { color: #61dafb; }
-.js-icon { color: #f7df1e; }
-.node-icon { color: #339933; }
-.figma-icon { color: #f24e1e; }
-.css-icon { color: #1572b6; }
-.python-icon { color: #3776ab; }
+.orbit-2 .tech-icon {
+    top: -25px;
+    left: calc(50% - 25px);
+    animation-delay: 0.5s;
+}
+
+.orbit-3 .tech-icon {
+    top: -25px;
+    left: calc(50% - 25px);
+    animation-delay: 1s;
+}
+
+.orbit-4 .tech-icon {
+    top: -25px;
+    left: calc(50% - 25px);
+    animation-delay: 1.5s;
+}
+
+.orbit-5 .tech-icon {
+    top: -25px;
+    left: calc(50% - 25px);
+    animation-delay: 2s;
+}
+
+.orbit-6 .tech-icon {
+    top: -25px;
+    left: calc(50% - 25px);
+    animation-delay: 2.5s;
+}
+
+.orbit-7 .tech-icon {
+    top: -25px;
+    left: calc(50% - 25px);
+    animation-delay: 3s;
+}
+
+.orbit-8 .tech-icon {
+    top: -25px;
+    left: calc(50% - 25px);
+    animation-delay: 3.5s;
+}
+
+.react-icon {
+    color: #61dafb;
+}
+
+.js-icon {
+    color: #f7df1e;
+}
+
+.node-icon {
+    color: #339933;
+}
+
+.figma-icon {
+    color: #f24e1e;
+}
+
+.css-icon {
+    color: #1572b6;
+}
+
+.python-icon {
+    color: #3776ab;
+}
 
 /* Floating Cards */
 .floating-cards {
@@ -796,36 +922,118 @@
    ADVANCED ANIMATIONS
    =============================================== */
 
-@keyframes gradientShift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+@keyframes meshFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-@keyframes patternMove {
-    from { transform: translateX(0) translateY(0); }
-    to { transform: translateX(100px) translateY(100px); }
+@keyframes meshPulse {
+    0% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+}
+
+@keyframes blobFloat {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+        transform: translate(-20px, 20px) scale(1.05);
+    }
+
+    50% {
+        transform: translate(10px, -15px) scale(0.95);
+    }
+
+    75% {
+        transform: translate(-15px, -10px) scale(1.02);
+    }
+}
+
+@keyframes gradientShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
 }
 
 @keyframes orbFloat {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(180deg); }
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
 }
 
 @keyframes shapeFloat {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    25% { transform: translateY(-10px) rotate(90deg); }
-    50% { transform: translateY(-15px) rotate(180deg); }
-    75% { transform: translateY(-5px) rotate(270deg); }
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-10px) rotate(90deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(180deg);
+    }
+
+    75% {
+        transform: translateY(-5px) rotate(270deg);
+    }
 }
 
 @keyframes statusPulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.02); }
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
 }
 
 @keyframes indicatorBlink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
 }
 
 @keyframes fadeInLeft {
@@ -833,6 +1041,7 @@
         opacity: 0;
         transform: translateX(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -840,50 +1049,117 @@
 }
 
 @keyframes underlineGrow {
-    from { transform: scaleX(0); }
-    to { transform: scaleX(1); }
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
 }
 
 @keyframes profilePulse {
-    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
-    50% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
 }
 
 @keyframes borderRotate {
-    from { transform: rotate(0deg); background-position: 0% 50%; }
-    to { transform: rotate(360deg); background-position: 100% 50%; }
+    from {
+        transform: rotate(0deg);
+        background-position: 0% 50%;
+    }
+
+    to {
+        transform: rotate(360deg);
+        background-position: 100% 50%;
+    }
 }
 
 @keyframes orbitRotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes techIconFloat {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-5px); }
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
 }
 
 @keyframes cardFloat {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 @keyframes scrollBounce {
-    0%, 100% { transform: translateX(-50%) translateY(0px); }
-    50% { transform: translateX(-50%) translateY(-10px); }
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0px);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
 }
 
 @keyframes arrowBounce {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(5px); }
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
 }
 
 /* Text rotation animation */
 @keyframes textRotate {
-    0%, 100% { opacity: 1; transform: translateY(0); }
-    25% { opacity: 0; transform: translateY(-20px); }
-    75% { opacity: 0; transform: translateY(20px); }
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    25% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    75% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
 }
 
 /* ===============================================
@@ -896,16 +1172,16 @@
         text-align: center;
         gap: var(--space-16);
     }
-    
+
     .hero-visual {
         order: -1;
     }
-    
+
     .profile-showcase {
         max-width: 400px;
         height: 400px;
     }
-    
+
     .floating-card {
         display: none;
     }
@@ -915,18 +1191,18 @@
     .title-name {
         font-size: clamp(2.5rem, 8vw, 4rem);
     }
-    
+
     .title-tagline {
         font-size: var(--font-size-xl);
     }
-    
+
     .hero-achievements {
         grid-template-columns: 1fr;
         max-width: 400px;
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .hero-cta {
         flex-direction: column;
         align-items: center;
@@ -934,28 +1210,28 @@
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .btn-large {
         width: 100%;
         max-width: 280px;
     }
-    
+
     .profile-showcase {
         max-width: 300px;
         height: 300px;
     }
-    
+
     .profile-image {
         width: 150px;
         height: 150px;
-    
+
     }
-    
+
     .tech-orbit {
         width: 300px;
         height: 300px;
     }
-    
+
     .orbit {
         transform: scale(0.8);
     }
@@ -965,71 +1241,86 @@
     .hero {
         padding: var(--space-16) 0;
     }
-    
+
     .hero-container {
         min-height: auto;
         gap: var(--space-12);
     }
-    
+
     .title-greeting {
         font-size: var(--font-size-lg);
     }
-    
+
     .title-name {
         font-size: clamp(2rem, 8vw, 3.5rem);
     }
-    
+
     .title-tagline {
         font-size: var(--font-size-lg);
     }
-    
+
     .hero-subtitle-container {
         flex-direction: column;
         gap: var(--space-3);
     }
-    
+
     .subtitle-line {
         width: 100px;
         height: 1px;
     }
-    
+
     .hero-description {
         font-size: var(--font-size-base);
     }
-    
+
     .hero-achievements {
         grid-template-columns: 1fr;
         gap: var(--space-4);
     }
-    
+
     .achievement {
         padding: var(--space-4);
     }
-    
+
     .hero-social {
         flex-direction: column;
         gap: var(--space-4);
     }
-    
+
     .profile-showcase {
-        max-width: 250px;
-        height: 250px;
+        max-width: 280px;
+        height: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    
+
+    .profile-main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 15;
+    }
+
     .profile-image {
-        width: 120px;
-        height: 120px;
+        width: 140px;
+        height: 140px;
     }
-    
+
     .tech-orbit {
-        width: 250px;
-        height: 250px;
+        width: 280px;
+        height: 280px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-    
+
     .tech-icon {
-        width: 40px;
-        height: 40px;
-        font-size: var(--font-size-lg);
+        width: 36px;
+        height: 36px;
+        font-size: var(--font-size-base);
     }
 }
 
@@ -1038,80 +1329,95 @@
         padding: var(--space-2) var(--space-4);
         font-size: var(--font-size-xs);
     }
-    
+
     .title-name {
         font-size: clamp(1.8rem, 8vw, 2.5rem);
     }
-    
+
     .title-tagline {
         font-size: var(--font-size-base);
     }
-    
+
     .hero-description {
         font-size: var(--font-size-sm);
     }
-    
+
     .achievement {
         flex-direction: column;
         text-align: center;
         gap: var(--space-2);
     }
-    
+
     .achievement-icon {
         width: 32px;
         height: 32px;
         font-size: var(--font-size-base);
     }
-    
+
     .achievement-number {
         font-size: var(--font-size-xl);
     }
-    
+
     .btn-large {
         padding: var(--space-4) var(--space-6);
         font-size: var(--font-size-base);
         min-height: 50px;
     }
-    
+
     .social-links-hero {
         gap: var(--space-2);
     }
-    
+
     .social-link-hero {
         width: 36px;
         height: 36px;
         font-size: var(--font-size-sm);
     }
-    
+
     .profile-showcase {
-        max-width: 200px;
-        height: 200px;
+        max-width: 220px;
+        height: 220px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    
+
+    .profile-main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 15;
+    }
+
     .profile-image {
-        width: 100px;
-        height: 100px;
+        width: 110px;
+        height: 110px;
     }
-    
+
     .image-placeholder {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
-    
+
     .tech-orbit {
-        width: 200px;
-        height: 200px;
+        width: 220px;
+        height: 220px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-    
+
     .orbit {
-        transform: scale(0.6);
+        transform: scale(0.55);
     }
-    
+
     .tech-icon {
-        width: 32px;
-        height: 32px;
-        font-size: var(--font-size-base);
+        width: 30px;
+        height: 30px;
+        font-size: var(--font-size-sm);
     }
-    
+
     .scroll-indicator {
         bottom: var(--space-4);
     }
