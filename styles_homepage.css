@@ -24,7 +24,7 @@
             #0f766e 100%);
     background-size: 400% 400%;
     animation: meshFlow 20s ease infinite;
-    padding: var(--space-8) 0;
+    padding: 100px 0 var(--space-8) 0;
 }
 
 /* Animated Mesh Gradient Overlay */
@@ -1239,7 +1239,7 @@
 
 @media (max-width: 768px) {
     .hero {
-        padding: var(--space-16) 0;
+        padding: 90px 0 var(--space-12) 0;
     }
 
     .hero-container {
