@@ -318,6 +318,11 @@ ul, ol {
     overflow: hidden;
 }
 
+/* Allow orbit overflow on hero visual side */
+.hero-visual {
+    overflow: visible;
+}
+
 /* Subtle grid pattern */
 .hero::before {
     content: '';
@@ -469,11 +474,13 @@ ul, ol {
     align-items: center;
     gap: 24px;
     position: relative;
+    min-height: 470px;
 }
 
 @media (max-width: 967px) {
     .hero-visual {
         order: -1;
+        min-height: 400px;
     }
 }
 
@@ -496,7 +503,7 @@ ul, ol {
     object-fit: cover;
     border-radius: 50%;
     position: relative;
-    z-index: 2;
+    z-index: 4;
 }
 
 .hero-image-ring {
@@ -504,12 +511,160 @@ ul, ol {
     inset: -8px;
     border-radius: 50%;
     border: 1.5px solid var(--border-default);
-    z-index: 1;
+    z-index: 3;
+}
+
+/* ─── Solar System Orbits ─────────────────── */
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Orbit 1 — inner ring */
+.orbit-1 {
+    --orbit-size: 340px;
+    width: var(--orbit-size);
+    height: var(--orbit-size);
+    margin-left: calc(var(--orbit-size) / -2);
+    margin-top: calc(var(--orbit-size) / -2);
+    animation: orbitSpin 28s linear infinite;
+}
+
+/* Orbit 2 — outer ring */
+.orbit-2 {
+    --orbit-size: 470px;
+    width: var(--orbit-size);
+    height: var(--orbit-size);
+    margin-left: calc(var(--orbit-size) / -2);
+    margin-top: calc(var(--orbit-size) / -2);
+    animation: orbitSpin 42s linear infinite reverse;
+}
+
+/* Dashed track ring */
+.orbit-track {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 1px dashed var(--color-gray-200);
+}
+
+/* Individual icon placement — positioned statically on the ring,
+   the parent .orbit rotates them. A nested span counter-rotates to stay upright. */
+.orbit-icon {
+    --radius: calc(var(--orbit-size) / 2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 38px;
+    height: 38px;
+    margin-left: -19px;
+    margin-top: -19px;
+    /* Place on circle edge */
+    transform: rotate(var(--angle)) translateX(var(--radius));
+}
+
+.orbit-icon .icon-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    font-size: 1.125rem;
+    transition: box-shadow 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+    /* Counter-rotate: undo icon --angle + undo parent orbit spin */
+    transform: rotate(calc(-1 * var(--angle)));
+    animation: iconCounterSpin1 28s linear infinite;
+}
+
+.orbit-2 .orbit-icon {
+    width: 36px;
+    height: 36px;
+    margin-left: -18px;
+    margin-top: -18px;
+}
+
+.orbit-2 .orbit-icon .icon-inner {
+    font-size: 1rem;
+    animation: iconCounterSpin2 42s linear infinite;
+}
+
+.orbit-icon:hover .icon-inner {
+    box-shadow: var(--shadow-md);
+    transform: rotate(calc(-1 * var(--angle))) scale(1.2);
+    z-index: 10;
+}
+
+/* Spin the entire orbit ring */
+@keyframes orbitSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Counter-spin icons to keep them upright (orbit-1 spins +360, so icons counter -360) */
+@keyframes iconCounterSpin1 {
+    from { transform: rotate(calc(-1 * var(--angle))); }
+    to   { transform: rotate(calc(-1 * var(--angle) - 360deg)); }
+}
+
+/* orbit-2 spins reverse (+360 reversed = effectively -360), so icons counter +360 */
+@keyframes iconCounterSpin2 {
+    from { transform: rotate(calc(-1 * var(--angle))); }
+    to   { transform: rotate(calc(-1 * var(--angle) + 360deg)); }
+}
+
+/* Devicon color overrides for non-colored variants */
+.orbit-icon .devicon-nextjs-plain {
+    color: var(--color-gray-900);
+}
+
+/* Responsive: scale orbits on smaller screens */
+@media (max-width: 967px) {
+    .orbit-1 {
+        --orbit-size: 290px;
+    }
+    .orbit-2 {
+        --orbit-size: 400px;
+    }
+}
+
+@media (max-width: 640px) {
+    .orbit-1 {
+        --orbit-size: 250px;
+    }
+    .orbit-2 {
+        --orbit-size: 350px;
+    }
+    .orbit-icon {
+        width: 32px;
+        height: 32px;
+        margin-left: -16px;
+        margin-top: -16px;
+        font-size: 0.95rem;
+    }
+    .orbit-2 .orbit-icon {
+        width: 30px;
+        height: 30px;
+        margin-left: -15px;
+        margin-top: -15px;
+        font-size: 0.875rem;
+    }
 }
 
 .hero-social {
     display: flex;
     gap: 8px;
+    position: relative;
+    z-index: 5;
+    margin-top: 80px; /* Push below the outer orbit ring */
 }
 
 .social-link-hero {
@@ -1206,6 +1361,10 @@ ul, ol {
     .hero-image-wrapper {
         width: 220px;
         height: 220px;
+    }
+
+    .hero-social {
+        margin-top: 50px;
     }
 
     .about-services {

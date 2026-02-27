@@ -11,6 +11,10 @@
     <link rel="shortcut icon" type="x-icon" href="logo1.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Devicon — colored language icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+    <!-- Lenis Smooth Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -69,17 +73,17 @@
 
                     <div class="hero-stats">
                         <div class="stat-item">
-                            <span class="stat-number" data-target="3">3+</span>
+                            <span class="stat-number" data-target="3" data-suffix="+">0</span>
                             <span class="stat-label">Years</span>
                         </div>
                         <div class="stat-divider"></div>
                         <div class="stat-item">
-                            <span class="stat-number" data-target="20">20+</span>
+                            <span class="stat-number" data-target="20" data-suffix="+">0</span>
                             <span class="stat-label">Projects</span>
                         </div>
                         <div class="stat-divider"></div>
                         <div class="stat-item">
-                            <span class="stat-number" data-target="25">25+</span>
+                            <span class="stat-number" data-target="25" data-suffix="+">0</span>
                             <span class="stat-label">Clients</span>
                         </div>
                     </div>
@@ -89,6 +93,30 @@
                     <div class="hero-image-wrapper">
                         <img src="me.jpeg" alt="Clinton Mugisha" class="hero-profile-img">
                         <div class="hero-image-ring"></div>
+
+                        <!-- Orbit Ring 1 — inner (6 icons) -->
+                        <div class="orbit orbit-1">
+                            <div class="orbit-track"></div>
+                            <div class="orbit-icon" style="--angle: 0deg;"><span class="icon-inner"><i class="devicon-react-original colored"></i></span></div>
+                            <div class="orbit-icon" style="--angle: 60deg;"><span class="icon-inner"><i class="devicon-javascript-plain colored"></i></span></div>
+                            <div class="orbit-icon" style="--angle: 120deg;"><span class="icon-inner"><i class="devicon-typescript-plain colored"></i></span></div>
+                            <div class="orbit-icon" style="--angle: 180deg;"><span class="icon-inner"><i class="devicon-nextjs-plain"></i></span></div>
+                            <div class="orbit-icon" style="--angle: 240deg;"><span class="icon-inner"><i class="devicon-vuejs-plain colored"></i></span></div>
+                            <div class="orbit-icon" style="--angle: 300deg;"><span class="icon-inner"><i class="devicon-nodejs-plain colored"></i></span></div>
+                        </div>
+
+                        <!-- Orbit Ring 2 — outer (8 icons) -->
+                        <div class="orbit orbit-2">
+                            <div class="orbit-track"></div>
+                            <div class="orbit-icon" style="--angle: 22deg;"><span class="icon-inner"><i class="devicon-python-plain colored"></i></span></div>
+                            <div class="orbit-icon" style="--angle: 67deg;"><span class="icon-inner"><i class="devicon-flutter-plain colored"></i></span></div>
+                            <div class="orbit-icon" style="--angle: 112deg;"><span class="icon-inner"><i class="devicon-firebase-plain colored"></i></span></div>
+                            <div class="orbit-icon" style="--angle: 157deg;"><span class="icon-inner"><i class="devicon-figma-plain colored"></i></span></div>
+                            <div class="orbit-icon" style="--angle: 202deg;"><span class="icon-inner"><i class="devicon-docker-plain colored"></i></span></div>
+                            <div class="orbit-icon" style="--angle: 247deg;"><span class="icon-inner"><i class="devicon-mongodb-plain colored"></i></span></div>
+                            <div class="orbit-icon" style="--angle: 292deg;"><span class="icon-inner"><i class="devicon-postgresql-plain colored"></i></span></div>
+                            <div class="orbit-icon" style="--angle: 337deg;"><span class="icon-inner"><i class="devicon-git-plain colored"></i></span></div>
+                        </div>
                     </div>
                     <div class="hero-social">
                         <a href="https://github.com/Clinton-mugisha" class="social-link-hero" aria-label="GitHub">
@@ -111,7 +139,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-label">About</span>
-                <h2 class="section-title">A developer who cares<br>about the details.</h2>
+                <h2 class="section-title" data-split>A developer who cares<br>about the details.</h2>
             </div>
             <div class="about-content">
                 <div class="about-text">
@@ -171,7 +199,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Skills</span>
-                <h2 class="section-title">Technologies I work with.</h2>
+                <h2 class="section-title" data-split>Technologies I work with.</h2>
                 <p class="section-subtitle">A versatile toolkit spanning frontend, backend, mobile, and design.</p>
             </div>
             <div class="skills-grid">
@@ -248,7 +276,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Work</span>
-                <h2 class="section-title">Selected projects.</h2>
+                <h2 class="section-title" data-split>Selected projects.</h2>
                 <p class="section-subtitle">A collection of recent work across web, mobile, and design.</p>
             </div>
             <div class="projects-grid">
@@ -485,7 +513,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Contact</span>
-                <h2 class="section-title">Let's work together.</h2>
+                <h2 class="section-title" data-split>Let's work together.</h2>
                 <p class="section-subtitle">Have a project in mind? I'd love to hear about it.</p>
             </div>
             <div class="contact-content">
@@ -565,6 +593,11 @@
         </div>
     </footer>
 
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

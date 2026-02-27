@@ -1,15 +1,10 @@
 /* ===============================================
-   HOMEPAGE — imports base + no overrides needed
-   The enhanced CSS file IS the design system now
+   HOMEPAGE — imports base + premium effects
    =============================================== */
 
 @import url('./styles_enhanced.css');
 
 /* Hero entrance animations (page-load only) */
-.hero-content {
-    animation: fadeInUp 0.8s var(--ease-out) both;
-}
-
 .hero-visual {
     animation: fadeInUp 0.8s var(--ease-out) 0.15s both;
 }
@@ -18,18 +13,16 @@
     animation: fadeInUp 0.6s var(--ease-out) 0.1s both;
 }
 
-.hero-title {
-    animation: fadeInUp 0.7s var(--ease-out) 0.2s both;
-}
-
 .hero-description {
-    animation: fadeInUp 0.7s var(--ease-out) 0.3s both;
+    animation: fadeInUp 0.7s var(--ease-out) 0.6s both;
 }
 
 .hero-cta {
-    animation: fadeInUp 0.7s var(--ease-out) 0.4s both;
+    animation: fadeInUp 0.7s var(--ease-out) 0.7s both;
 }
 
 .hero-stats {
-    animation: fadeInUp 0.7s var(--ease-out) 0.5s both;
+    animation: fadeInUp 0.7s var(--ease-out) 0.8s both;
 }
+
+/* Orbit entrance — handled by GSAP in script.js to avoid overriding the spin animation */
