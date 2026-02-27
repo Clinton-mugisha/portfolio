@@ -9,584 +9,99 @@
     <title>Clinton Mugisha - Software Developer & UI/UX Designer</title>
     <link rel="stylesheet" href="styles_homepage.css">
     <link rel="shortcut icon" type="x-icon" href="logo1.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.projects {
-    padding: 80px 0;
-    background: #f8f9fa;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.section-title:after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
-    border-radius: 2px;
-}
-
-.section-subtitle {
-    font-size: 1.1rem;
-    color: #666;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Modified projects grid for 4 columns */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-bottom: 80px;
-}
-
-@media (min-width: 1200px) {
-    .projects-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1199px) {
-    .projects-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 767px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.project-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-}
-
-.project-image {
-    position: relative;
-    overflow: hidden;
-    height: 200px;
-}
-
-.project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover .project-image img {
-    transform: scale(1.1);
-}
-
-.project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.project-card:hover .project-overlay {
-    opacity: 1;
-}
-
-.project-links {
-    display: flex;
-    gap: 15px;
-}
-
-.project-link {
-    width: 45px;
-    height: 45px;
-    background: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #333;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.project-link:hover {
-    background: #14b8a6;
-    color: white;
-    transform: scale(1.1);
-}
-
-.project-info {
-    padding: 25px;
-}
-
-.project-info h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #2c3e50;
-    margin-bottom: 15px;
-}
-
-.project-info p {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    font-size: 0.95rem;
-}
-
-.project-tech {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.project-tech span {
-    background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
-    color: white;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
-}
-
-/* Mobile Apps Section Styles */
-.mobile-apps {
-    padding: 80px 0;
-    background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
-
-.mobile-apps::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>') repeat;
-    animation: float 20s infinite linear;
-}
-
-@keyframes float {
-    0% { transform: translateX(-100px) translateY(-100px); }
-    100% { transform: translateX(100px) translateY(100px); }
-}
-
-.mobile-apps .section-title {
-    color: white;
-}
-
-.mobile-apps .section-title:after {
-    background: white;
-}
-
-.mobile-apps .section-subtitle {
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.mobile-apps-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    position: relative;
-    z-index: 2;
-}
-
-.mobile-app-card {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    padding: 40px 30px;
-    text-align: center;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.mobile-app-card:before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    transform: rotate(45deg);
-    transition: all 0.5s ease;
-    opacity: 0;
-}
-
-.mobile-app-card:hover:before {
-    opacity: 1;
-    animation: shine 0.8s ease-in-out;
-}
-
-@keyframes shine {
-    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-}
-
-.mobile-app-card:hover {
-    transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-
-.mobile-app-icon {
-    width: 80px;
-    height: 80px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 25px;
-    font-size: 2rem;
-    transition: all 0.3s ease;
-}
-
-.mobile-app-card:hover .mobile-app-icon {
-    background: white;
-    color: #14b8a6;
-    transform: scale(1.1) rotate(5deg);
-}
-
-.mobile-app-card h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: white;
-}
-
-.mobile-app-card p {
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-.mobile-app-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: white;
-    color: #14b8a6;
-    padding: 12px 25px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.mobile-app-link:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s ease;
-}
-
-.mobile-app-link:hover:before {
-    left: 100%;
-}
-
-.mobile-app-link:hover {
-    background: rgba(255, 255, 255, 0.95);
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .mobile-apps {
-        padding: 60px 0;
-    }
-
-    .mobile-apps-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .mobile-app-card {
-        padding: 30px 20px;
-    }
-}
-    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">Clinton<span>.dev</span></a>
+        <div class="container">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="#home">Clinton<span>.dev</span></a>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <!-- <div class="nav-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div> -->
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <!-- Background Elements -->
-        <div class="hero-bg">
-            <div class="bg-pattern"></div>
-            <div class="bg-gradient-orb orb-1"></div>
-            <div class="bg-gradient-orb orb-2"></div>
-            <div class="bg-gradient-orb orb-3"></div>
-        </div>
-        
-        <!-- Floating Geometric Shapes -->
-        <div class="geometric-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
-            <div class="shape shape-4"></div>
-            <div class="shape shape-5"></div>
-        </div>
-        
         <div class="container">
             <div class="hero-container">
                 <div class="hero-content">
-                    <!-- Status Badge -->
-                    <!-- <div class="hero-status">
-                        <div class="status-indicator"></div>
-                       
-                    </div> -->
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        Available for new projects
+                    </div>
                     
-                    <!-- Main Title with Typing Effect -->
                     <h1 class="hero-title">
-                        <span class="title-greeting">Hello, I'm</span>
-                        <span class="title-name " style="color: #ffffff;">Clinton Mugisha</span>
-                    </h1>              
-                    <!-- Enhanced description -->
+                        I craft digital<br>
+                        experiences that<br>
+                        <span class="title-accent">people love.</span>
+                    </h1>
+                    
                     <p class="hero-description">
-                       I am <span class="highlight-text">Passionate</span> about creating digital experiences that seamlessly blend 
-                        <span class="highlight-text">clean code</span> with <span class="highlight-text">beautiful design</span>. 
-                        With 3+ years of experience, I transform ideas into engaging, user-centric applications.
+                        Software developer & UI/UX designer with 3+ years of experience 
+                        turning ideas into polished, user-centric applications.
                     </p>
                     
-                    <!-- Achievement Stats -->
-                    <div class="hero-achievements">
-                        <div class="achievement">
-                            <div class="achievement-icon">
-                                <i class="fas fa-calendar-alt"></i>
-                            </div>
-                            <div class="achievement-content">
-                                <span class="achievement-number" data-target="3">3</span><span class="plus">+</span>
-                                <span class="achievement-label">Years Experience</span>
-                            </div>
-                        </div>
-                        <div class="achievement">
-                            <div class="achievement-icon">
-                                <i class="fas fa-project-diagram"></i>
-                            </div>
-                            <div class="achievement-content">
-                                <span class="achievement-number" data-target="50">20</span><span class="plus">+</span>
-                                <span class="achievement-label">Projects Completed</span>
-                            </div>
-                        </div>
-                        <div class="achievement">
-                            <div class="achievement-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="achievement-content">
-                                <span class="achievement-number" data-target="25">25</span><span class="plus">+</span>
-                                <span class="achievement-label">Happy Clients</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Enhanced CTA Buttons -->
                     <div class="hero-cta">
-                        <a href="#projects" class="btn btn-primary btn-large">
-                            <span class="btn-text">Explore My Work</span>
-                            <span class="btn-icon">
-                                <i class="fas fa-rocket"></i>
-                            </span>
+                        <a href="#projects" class="btn btn-primary">
+                            View My Work
+                            <i class="fas fa-arrow-right"></i>
                         </a>
-                        <a href="#contact" class="btn btn-outline btn-large">
-                            <span class="btn-text">Let's Connect</span>
-                            <span class="btn-icon">
-                                <i class="fas fa-comments"></i>
-                            </span>
+                        <a href="#contact" class="btn btn-secondary">
+                            Get in Touch
                         </a>
                     </div>
-                    
-                    <!-- Social Links -->
-                    <div class="hero-social">
-                        <span class="social-label">Follow me on</span>
-                        <div class="social-links-hero">
-                            <a href="https://github.com/Clinton-mugisha" class="social-link-hero github">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/mugisha-clinton-55972b271/" class="social-link-hero linkedin">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://wa.me/256703322015" class="social-link-hero twitter">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="3">3+</span>
+                            <span class="stat-label">Years</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="20">20+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="25">25+</span>
+                            <span class="stat-label">Clients</span>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Enhanced Visual Side -->
                 <div class="hero-visual">
-                    <!-- Main Profile Display -->
-                    <div class="profile-showcase">
-                        <div class="profile-main">
-                            <div class="profile-image-container">
-                                <div class="profile-image">
-                                    <div><img src="me.jpeg" alt="Clinton Mugisha" style="width: 100%; height: 100%; object-fit: cover;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Tech Stack Orbit -->
-                        <div class="tech-orbit">
-                            <div class="orbit orbit-1">
-                                <div class="tech-icon react-icon">
-                                    <i class="fab fa-react"></i>
-                                </div>
-                            </div>
-                            <div class="orbit orbit-2">
-                                <div class="tech-icon js-icon">
-                                    <i class="fab fa-js-square"></i>
-                                </div>
-                            </div>
-                            <div class="orbit orbit-3">
-                                <div class="tech-icon node-icon">
-                                    <i class="fab fa-node-js"></i>
-                                </div>
-                            </div>
-                            <div class="orbit orbit-4">
-                                <div class="tech-icon figma-icon">
-                                    <i class="fab fa-figma"></i>
-                                </div>
-                            </div>
-                            <div class="orbit orbit-5">
-                                <div class="tech-icon css-icon">
-                                    <i class="fab fa-css3-alt"></i>
-                                </div>
-                            </div>
-                            <div class="orbit orbit-6">
-                                <div class="tech-icon python-icon">
-                                    <i class="fab fa-python"></i>
-                                </div>
-                            </div>
-                            <div class="orbit orbit-7">
-                                <div class="tech-icon aws-icon">
-                                    <i class="fab fa-aws"></i>
-                                </div>
-                            </div>
-                            <div class="orbit orbit-8">
-                                <div class="tech-icon git-icon">
-                                    <i class="fab fa-git"></i>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Floating Cards -->
-                        <!-- <div class="floating-cards">
-                            <div class="floating-card card-1">
-                                <div class="card-icon">
-                                    <i class="fas fa-code"></i>
-                                </div>
-                                <div class="card-text">
-                                    <span class="card-title">Clean Code</span>
-                                    <span class="card-subtitle">Best Practices</span>
-                                </div>
-                            </div>
-                            <div class="floating-card card-2">
-                                <div class="card-icon">
-                                    <i class="fas fa-palette"></i>
-                                </div>
-                                <div class="card-text">
-                                    <span class="card-title">UI/UX Design</span>
-                                    <span class="card-subtitle">User Focused</span>
-                                </div>
-                            </div>
-                            <div class="floating-card card-3">
-                                <div class="card-icon">
-                                    <i class="fas fa-mobile-alt"></i>
-                                </div>
-                                <div class="card-text">
-                                    <span class="card-title">Responsive</span>
-                                    <span class="card-subtitle">All Devices</span>
-                                </div>
-                            </div>
-                        </div> -->
+                    <div class="hero-image-wrapper">
+                        <img src="me.jpeg" alt="Clinton Mugisha" class="hero-profile-img">
+                        <div class="hero-image-ring"></div>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://github.com/Clinton-mugisha" class="social-link-hero" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mugisha-clinton-55972b271/" class="social-link-hero" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/256703322015" class="social-link-hero" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </div>
-        
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
-            <div class="scroll-text">Scroll to explore</div>
-            <div class="scroll-arrow">
-                <i class="fas fa-chevron-down"></i>
             </div>
         </div>
     </section>
@@ -595,8 +110,8 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Passionate about creating exceptional digital experiences</p>
+                <span class="section-label">About</span>
+                <h2 class="section-title">A developer who cares<br>about the details.</h2>
             </div>
             <div class="about-content">
                 <div class="about-text">
@@ -607,7 +122,7 @@
                     </p>
                     <p>
                         My journey combines the technical precision of software development with the 
-                        creative intuition of UI/UX design. I believe that great applications are born 
+                        creative intuition of UI/UX design. I believe great applications are born 
                         from the perfect marriage of functionality and aesthetics.
                     </p>
                     <div class="about-stats">
@@ -625,17 +140,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="about-image">
-                    <div class="about-card">
-                        <div class="card-content">
-                            <h3>What I Do</h3>
-                            <ul>
-                                <li><i class="fas fa-code"></i> Full-Stack Development</li>
-                                <li><i class="fas fa-mobile-alt"></i> Mobile App Development</li>
-                                <li><i class="fas fa-paint-brush"></i> UI/UX Design</li>
-                                <li><i class="fas fa-search"></i> User Research</li>
-                            </ul>
-                        </div>
+                <div class="about-services">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-code"></i></div>
+                        <h3>Full-Stack Development</h3>
+                        <p>End-to-end web applications built with modern frameworks and best practices.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>Mobile Apps</h3>
+                        <p>Cross-platform mobile applications using Flutter and React Native.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+                        <h3>UI/UX Design</h3>
+                        <p>User-centered design with research-backed interfaces that convert.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-search"></i></div>
+                        <h3>User Research</h3>
+                        <p>Data-driven insights to create products people genuinely enjoy using.</p>
                     </div>
                 </div>
             </div>
@@ -646,12 +170,13 @@
     <section id="skills" class="skills">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Skills & Technologies</h2>
-                <p class="section-subtitle">Tools and technologies I work with</p>
+                <span class="section-label">Skills</span>
+                <h2 class="section-title">Technologies I work with.</h2>
+                <p class="section-subtitle">A versatile toolkit spanning frontend, backend, mobile, and design.</p>
             </div>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3><i class="fas fa-laptop-code"></i> Frontend Development</h3>
+                    <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
                     <div class="skill-items">
                         <span class="skill-item">JavaScript</span>
                         <span class="skill-item">React</span>
@@ -665,7 +190,7 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-laptop-code"></i> Backend Development</h3>
+                    <h3><i class="fas fa-server"></i> Backend</h3>
                     <div class="skill-items">
                         <span class="skill-item">Node.js</span>
                         <span class="skill-item">Python</span>
@@ -676,7 +201,7 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-mobile-alt"></i> Mobile Development</h3>
+                    <h3><i class="fas fa-mobile-alt"></i> Mobile</h3>
                     <div class="skill-items">
                         <span class="skill-item">React Native</span>
                         <span class="skill-item">Flutter</span>
@@ -687,24 +212,23 @@
                     <h3><i class="fas fa-database"></i> Databases</h3>
                     <div class="skill-items">
                         <span class="skill-item">Firebase</span>
-                        <span class="skill-item">Superbase</span>
+                        <span class="skill-item">Supabase</span>
                         <span class="skill-item">MongoDB</span>
                         <span class="skill-item">PostgreSQL</span>
                         <span class="skill-item">MySQL</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-paint-brush"></i> Design & UX</h3>
+                    <h3><i class="fas fa-paint-brush"></i> Design</h3>
                     <div class="skill-items">
                         <span class="skill-item">Figma</span>
                         <span class="skill-item">User Research</span>
                         <span class="skill-item">Wireframing</span>
                         <span class="skill-item">Prototyping</span>
-
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Tools & Others</h3>
+                    <h3><i class="fas fa-tools"></i> Tools</h3>
                     <div class="skill-items">
                         <span class="skill-item">Git</span>
                         <span class="skill-item">Docker</span>
@@ -723,43 +247,44 @@
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">A showcase of my recent work in development and design</p>
+                <span class="section-label">Work</span>
+                <h2 class="section-title">Selected projects.</h2>
+                <p class="section-subtitle">A collection of recent work across web, mobile, and design.</p>
             </div>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/Screenshot from 2026-01-22 10-22-12.png" alt="Adrian Logistics AI" class="project-image">
+                        <img src="images/Screenshot from 2026-01-22 10-22-12.png" alt="Adrian Logistics AI">
                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="http://ai.ride-link.com/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                            <a href="http://ai.ride-link.com/" class="project-link" target="_blank">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>Adrian Logistics AI</h3>
-                        <p>AI-powered logistics management system called Adrian.</p>
+                        <p>AI-powered logistics management system for intelligent route optimization and fleet management.</p>
                         <div class="project-tech">
-                            <span>Nextjs</span>
+                            <span>Next.js</span>
                             <span>Node.js</span>
                             <span>Firebase</span>
                             <span>MCP</span>
-                            <span>Rest APIs</span>
                         </div>
                     </div>
                 </div>
-                 <div class="project-card">
+
+                <div class="project-card">
                     <div class="project-image">
-                        <img src="images/platform.png" alt="Ridelink" class="project-image">
+                        <img src="images/platform.png" alt="Ridelink Platform">
                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://canary.ride-link.com/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                            <a href="https://canary.ride-link.com/" class="project-link" target="_blank">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>Ridelink Platform</h3>
-                        <p>Platform for managing ridelinks logistics and operations.</p>
+                        <p>Comprehensive platform for managing logistics operations and fleet coordination.</p>
                         <div class="project-tech">
                             <span>Next.js</span>
                             <span>Node.js</span>
@@ -768,60 +293,61 @@
                         </div>
                     </div>
                 </div>
-                 <div class="project-card">
+
+                <div class="project-card">
                     <div class="project-image">
-                        <img src="images/fount.png" alt="Fount Consult" class="project-image">
+                        <img src="images/fount.png" alt="Fount Consult">
                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://www.fountconsult.com/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                            <a href="https://www.fountconsult.com/" class="project-link" target="_blank">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>Fount Consult</h3>
-                        <p>This is a consultancy website for fountconsults</p>
+                        <p>Professional consultancy website with a clean, corporate design language.</p>
                         <div class="project-tech">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
-                            <span>cloud flare</span>
+                            <span>Cloudflare</span>
                         </div>
                     </div>
                 </div>
+
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/nexus.png" alt="Nexus Logistics" class="project-image">
+                        <img src="images/nexus.png" alt="Nexus Logistics Africa">
                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://www.nexusminerals.org/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                            <a href="https://www.nexusminerals.org/" class="project-link" target="_blank">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>Nexus Logistics Africa</h3>
-                        <p>This is a logistics website for nexus minerals and logistics in africa</p>
+                        <p>Logistics website for minerals and logistics operations across Africa.</p>
                         <div class="project-tech">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
                             <span>Squarespace</span>
-                            <span>Google search console</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/ecom.png" alt="E-Commerce Platform" class="project-image">
+                        <img src="images/ecom.png" alt="E-Commerce Platform">
                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://ecom-seven-lake.vercel.app/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                            <a href="https://ecom-seven-lake.vercel.app/" class="project-link" target="_blank">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>E-Commerce Platform</h3>
-                        <p>Full-stack e-commerce solution with Nextjs, Node.js, and Firebase. Features include user authentication, vendor platform, and admin dashboard.</p>
+                        <p>Full-stack e-commerce with authentication, vendor platform, and admin dashboard.</p>
                         <div class="project-tech">
                             <span>React</span>
                             <span>Node.js</span>
@@ -833,58 +359,58 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/tracking.png" alt="Package Tracking" class="project-image">
+                        <img src="images/tracking.png" alt="Package Tracking">
                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://tracking.ride-link.com/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                            <a href="https://tracking.ride-link.com/" class="project-link" target="_blank">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>Package Tracking</h3>
-                        <p>Complete design for a modern package tracking application. Includes over 1560 different courriers and you can track your cargo with an airwaybill number, bill of lading number or tracking number.</p>
+                        <p>Track cargo across 1560+ couriers with airwaybill, bill of lading, or tracking number.</p>
                         <div class="project-tech">
-                            <span>Nextjs</span>
+                            <span>Next.js</span>
                             <span>Node.js</span>
                             <span>Firebase</span>
-                            <span>Rest APIs</span>  
+                            <span>REST APIs</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/tax.png" alt="Tax Calculator" class="project-image">
+                        <img src="images/tax.png" alt="Tax Calculator">
                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://tax.ride-link.com/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                            <a href="https://tax.ride-link.com/" class="project-link" target="_blank">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>Tax Calculator</h3>
-                        <p>Developed a comprehensive tax tool that calculates taxes for both General goods and Vehicles in Uganda</p>
+                        <p>Comprehensive tax tool for general goods and vehicles in Uganda.</p>
                         <div class="project-tech">
-                            <span>Nextjs</span>
+                            <span>Next.js</span>
                             <span>Node.js</span>
                             <span>Firebase</span>
-                            <span>Rest APIs</span>
+                            <span>REST APIs</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/infinity.png" alt="Infinity Tours & Travel" class="project-image">
+                        <img src="images/infinity.png" alt="Infinity Tours & Travel">
                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://www.infinitytoursandtravel.com/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                            <a href="https://www.infinitytoursandtravel.com/" class="project-link" target="_blank">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>Infinity Tours & Travel</h3>
-                        <p>Was Contracted by Infinity Tours & Travel to develop a website for their business and this was the result</p>
+                        <p>Tourism business website with booking features and destination showcases.</p>
                         <div class="project-tech">
                             <span>HTML</span>
                             <span>CSS</span>
@@ -895,58 +421,57 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/avias.png" alt="African Visual Artist Associate" class="project-image">
+                        <img src="images/avias.png" alt="African Visual Artist Associate">
                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://www.africanvisualartistsassociate.org/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                            <a href="https://www.africanvisualartistsassociate.org/" class="project-link" target="_blank">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>African Visual Artist Associate</h3>
-                        <p>Volunteered as a web developer for the African Visual Artist Associate and Developed the platform of this NGO that shades light about climate change</p>
+                        <h3>African Visual Artists</h3>
+                        <p>NGO platform raising awareness about climate change through visual art.</p>
                         <div class="project-tech">
-                            <span>Reactjs</span>
+                            <span>React</span>
                         </div>
                     </div>
                 </div>
+
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/ridelink.jpeg" alt="Ridelink" class="project-image">
+                        <img src="images/ridelink.jpeg" alt="Ridelink App">
                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://play.google.com/store/apps/details?id=com.ridelink.app&hl=en" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                            <a href="https://play.google.com/store/apps/details?id=com.ridelink.app&hl=en" class="project-link" target="_blank">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>Ridelink App</h3>
-                        <p>This is the Ridelink Mobile Application that connects clients to trusted transporters</p>
+                        <p>Mobile app connecting clients to trusted transporters with real-time tracking.</p>
                         <div class="project-tech">
                             <span>Flutter</span>
                             <span>Firebase</span>
-                            <span>Rest APIs</span>
                             <span>Google Maps</span>
-                            <span>IOTech</span>
                         </div>
                     </div>
                 </div>
+
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/tagtail.jpeg" alt="Tagtail" class="project-image">
+                        <img src="images/tagtail.jpeg" alt="Tagtail App">
                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://play.google.com/store/apps/details?id=com.trailtag.app&hl=en" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                            <a href="https://play.google.com/store/apps/details?id=com.trailtag.app&hl=en" class="project-link" target="_blank">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>Tagtail App</h3>
-                        <p>This is the Tagtail Mobile Application that enables clients to track transporters in real time so as to stay in the loop of their cargo</p>
+                        <p>Real-time transporter tracking so clients always stay in the loop.</p>
                         <div class="project-tech">
                             <span>Flutter</span>
                             <span>Firebase</span>
-                            <span>Rest APIs</span>
                             <span>Google Maps</span>
                         </div>
                     </div>
@@ -954,12 +479,14 @@
             </div>
         </div>
     </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Let's Work Together</h2>
-                <p class="section-subtitle">Ready to bring your ideas to life? Let's connect!</p>
+                <span class="section-label">Contact</span>
+                <h2 class="section-title">Let's work together.</h2>
+                <p class="section-subtitle">Have a project in mind? I'd love to hear about it.</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
@@ -978,7 +505,7 @@
                         </div>
                         <div class="contact-details">
                             <h3>Phone</h3>
-                            <a href="tel:+256703322015">256703322015</a>
+                            <a href="tel:+256703322015">+256 703 322 015</a>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -991,20 +518,29 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form"   action="https://formspree.io/f/mqadnkkv" method="POST">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <form class="contact-form" action="https://formspree.io/f/mqadnkkv" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
                     </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        Send Message
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
                 </form>
             </div>
         </div>
@@ -1014,15 +550,16 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2025 Clinton Mugisha. All rights reserved.</p>
+                <div class="footer-left">
+                    <div class="footer-logo">Clinton<span>.dev</span></div>
+                    <p class="footer-text">&copy; 2026 Clinton Mugisha. All rights reserved.</p>
                 </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/mugisha-clinton-55972b271/" class="social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/Clinton-mugisha" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="https://wa.me/256703322015" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                  
-                  
+                <div class="footer-right">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mugisha-clinton-55972b271/" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Clinton-mugisha" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://wa.me/256703322015" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
