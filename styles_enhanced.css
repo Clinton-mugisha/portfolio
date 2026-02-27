@@ -527,7 +527,7 @@ ul, ol {
 
 /* Orbit 1 — inner ring */
 .orbit-1 {
-    --orbit-size: 340px;
+    --orbit-size: 410px;
     width: var(--orbit-size);
     height: var(--orbit-size);
     margin-left: calc(var(--orbit-size) / -2);
@@ -537,7 +537,7 @@ ul, ol {
 
 /* Orbit 2 — outer ring */
 .orbit-2 {
-    --orbit-size: 470px;
+    --orbit-size: 530px;
     width: var(--orbit-size);
     height: var(--orbit-size);
     margin-left: calc(var(--orbit-size) / -2);
@@ -629,19 +629,19 @@ ul, ol {
 /* Responsive: scale orbits on smaller screens */
 @media (max-width: 967px) {
     .orbit-1 {
-        --orbit-size: 290px;
+        --orbit-size: 340px;
     }
     .orbit-2 {
-        --orbit-size: 400px;
+        --orbit-size: 460px;
     }
 }
 
 @media (max-width: 640px) {
     .orbit-1 {
-        --orbit-size: 250px;
+        --orbit-size: 300px;
     }
     .orbit-2 {
-        --orbit-size: 350px;
+        --orbit-size: 400px;
     }
     .orbit-icon {
         width: 32px;
