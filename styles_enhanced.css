@@ -166,13 +166,14 @@ ul, ol {
     color: var(--color-accent);
 }
 
-.nav-menu {
+/* Desktop nav links (inline in navbar) */
+.nav-menu--desktop {
     display: flex;
     align-items: center;
     gap: 2px;
 }
 
-.nav-link {
+.nav-menu--desktop .nav-link {
     font-size: 0.875rem;
     font-weight: 500;
     color: var(--text-secondary);
@@ -182,11 +183,12 @@ ul, ol {
     position: relative;
 }
 
-.nav-link:hover {
+.nav-menu--desktop .nav-link:hover {
     color: var(--text-primary);
     background: var(--color-gray-100);
 }
 
+/* Hamburger toggle */
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -195,6 +197,8 @@ ul, ol {
     border-radius: var(--radius-sm);
     gap: 5px;
     transition: background var(--transition-fast);
+    z-index: 10010;
+    position: relative;
 }
 
 .nav-toggle:hover {
@@ -207,6 +211,66 @@ ul, ol {
     background: var(--text-primary);
     border-radius: 2px;
     transition: transform var(--transition-normal), opacity var(--transition-normal);
+}
+
+.nav-toggle.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.nav-toggle.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ─── Mobile Menu Overlay (lives outside navbar) ─── */
+.mobile-menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 24px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.04);
+    transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.mobile-menu-link {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--color-gray-900);
+    padding: 16px 40px;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    width: 100%;
+    max-width: 320px;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link:active {
+    color: var(--color-accent);
+    background: var(--color-accent-subtle);
+}
+
+/* Hide mobile overlay on desktop */
+@media (min-width: 769px) {
+    .mobile-menu-overlay {
+        display: none !important;
+    }
 }
 
 /* ===============================================
@@ -1262,48 +1326,13 @@ ul, ol {
    =============================================== */
 
 @media (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        top: 64px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(255, 255, 255, 0.97);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding-top: 48px;
-        gap: 4px;
-        transform: translateX(-100%);
-        transition: transform var(--transition-slow);
-        z-index: 999;
-    }
-
-    .nav-menu.active {
-        transform: translateX(0);
+    /* Hide desktop nav links on mobile */
+    .nav-menu--desktop {
+        display: none;
     }
 
     .nav-toggle {
         display: flex;
-    }
-
-    .nav-toggle.active .bar:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
-    }
-
-    .nav-toggle.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .nav-toggle.active .bar:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
-    }
-
-    .nav-link {
-        font-size: 1rem;
-        padding: 12px 24px;
     }
 
     .section-title {
