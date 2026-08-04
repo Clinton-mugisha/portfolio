@@ -3,692 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Clinton Mugisha - Software Developer & UI/UX Designer">
-    <meta name="keywords" content="Software Developer, UI/UX Designer, Clinton Mugisha, Clinton, Mugisha, Uganda, Top Software Developer, Top UI/UX Designer">
+    <meta name="description" content="Clinton Mugisha is a software developer and product designer in Kampala, building thoughtful web, mobile, and AI-powered digital products.">
+    <meta name="keywords" content="Software Developer, Product Designer, UI/UX Designer, Clinton Mugisha, Kampala, Uganda">
     <meta name="author" content="Clinton Mugisha">
-    <title>Clinton Mugisha - Software Developer & UI/UX Designer</title>
-    <link rel="stylesheet" href="styles_homepage.css">
-    <link rel="shortcut icon" type="x-icon" href="logo1.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Devicon — colored language icons -->
+    <meta name="theme-color" content="#11110f">
+    <meta property="og:title" content="Clinton Mugisha — Developer & Product Designer">
+    <meta property="og:description" content="Thoughtful digital products, built from first idea to final interaction.">
+    <meta property="og:image" content="me.jpeg">
+    <title>Clinton Mugisha — Developer & Product Designer</title>
+    <link rel="shortcut icon" type="image/png" href="logo1.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
-    <!-- Lenis Smooth Scroll -->
-    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+    <link rel="stylesheet" href="styles_homepage.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <a href="#home">Clinton<span>.dev</span></a>
-                </div>
-                <div class="nav-toggle" id="mobile-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <!-- Desktop only: inline links -->
-                <div class="nav-menu nav-menu--desktop">
-                    <a href="#home" class="nav-link">Home</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#skills" class="nav-link">Skills</a>
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-header>
+        <a class="brand" href="#home" aria-label="Clinton Mugisha, home">
+            <span class="brand-mark">CM</span>
+            <span class="brand-name">Clinton Mugisha</span>
+        </a>
 
-    <!-- Mobile Menu Overlay (outside navbar to avoid stacking context issues) -->
-    <div class="mobile-menu-overlay" id="nav-menu">
-        <a href="#home" class="mobile-menu-link">Home</a>
-        <a href="#about" class="mobile-menu-link">About</a>
-        <a href="#skills" class="mobile-menu-link">Skills</a>
-        <a href="#projects" class="mobile-menu-link">Projects</a>
-        <a href="#contact" class="mobile-menu-link">Contact</a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <a class="header-cta" href="mailto:mugishaclinton412@gmail.com">
+            <span>Let&rsquo;s talk</span>
+            <span aria-hidden="true">↗</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span></span><span></span>
+        </button>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <nav aria-label="Mobile navigation">
+            <a href="#work"><span>01</span> Work</a>
+            <a href="#about"><span>02</span> About</a>
+            <a href="#contact"><span>03</span> Contact</a>
+        </nav>
+        <div class="mobile-menu-footer">
+            <p>Kampala, Uganda</p>
+            <a href="mailto:mugishaclinton412@gmail.com">mugishaclinton412@gmail.com</a>
+        </div>
     </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <div class="hero-badge">
-                        <span class="badge-dot"></span>
-                        Available for new projects
-                    </div>
-                    
-                    <h1 class="hero-title">
-                        I craft digital<br>
-                        experiences that<br>
-                        <span class="title-accent">people love.</span>
-                    </h1>
-                    
-                    <p class="hero-description">
-                        Hello I am Mugisha Clinton a Software developer & UI/UX designer with 3+ years of experience 
-                        turning ideas into polished, user-centric applications.
-                    </p>
-                    
-                    <div class="hero-cta">
-                        <a href="#projects" class="btn btn-primary">
-                            View My Work
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">
-                            Get in Touch
-                        </a>
-                    </div>
+    <main id="main">
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <div class="hero-topline reveal-up">
+                <p class="eyebrow"><span class="status-dot"></span> Available for select projects</p>
+                <p class="hero-location">Kampala, Uganda <span>—</span> <span data-local-time>00:00 EAT</span></p>
+            </div>
 
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="3" data-suffix="+">0</span>
-                            <span class="stat-label">Years</span>
-                        </div>
-                        <div class="stat-divider"></div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="20" data-suffix="+">0</span>
-                            <span class="stat-label">Projects</span>
-                        </div>
-                        <div class="stat-divider"></div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="25" data-suffix="+">0</span>
-                            <span class="stat-label">Clients</span>
-                        </div>
-                    </div>
+            <div class="hero-heading-wrap">
+                <h1 class="hero-title" id="hero-title">
+                    <span class="title-line"><span>Digital products</span></span>
+                    <span class="title-line title-line--indented"><span>with clarity,</span></span>
+                    <span class="title-line title-line--accent"><span>character &amp; craft.</span></span>
+                </h1>
+            </div>
+
+            <div class="hero-bottom">
+                <div class="hero-intro reveal-up">
+                    <p>I&rsquo;m Clinton — a software developer and product designer turning ambitious ideas into useful, memorable experiences.</p>
+                    <a class="text-link" href="#work">Explore selected work <span aria-hidden="true">↓</span></a>
                 </div>
-                
-                <div class="hero-visual">
-                    <div class="hero-image-wrapper">
-                        <img src="me.jpeg" alt="Clinton Mugisha" class="hero-profile-img">
-                        <div class="hero-image-ring"></div>
 
-                        <!-- Orbit Ring 1 — inner (6 icons) -->
-                        <div class="orbit orbit-1">
-                            <div class="orbit-track"></div>
-                            <div class="orbit-icon" style="--angle: 0deg;"><span class="icon-inner"><i class="devicon-react-original colored"></i></span></div>
-                            <div class="orbit-icon" style="--angle: 60deg;"><span class="icon-inner"><i class="devicon-javascript-plain colored"></i></span></div>
-                            <div class="orbit-icon" style="--angle: 120deg;"><span class="icon-inner"><i class="devicon-typescript-plain colored"></i></span></div>
-                            <div class="orbit-icon" style="--angle: 180deg;"><span class="icon-inner"><i class="devicon-nextjs-plain"></i></span></div>
-                            <div class="orbit-icon" style="--angle: 240deg;"><span class="icon-inner"><i class="devicon-vuejs-plain colored"></i></span></div>
-                            <div class="orbit-icon" style="--angle: 300deg;"><span class="icon-inner"><i class="devicon-nodejs-plain colored"></i></span></div>
-                        </div>
+                <figure class="portrait-card reveal-up">
+                    <div class="orbit-ring orbit-ring--outer" aria-hidden="true">
+                        <span class="orbit-icon" style="--angle: 0deg"><span class="orbit-icon-inner"><i class="devicon-react-original colored"></i></span></span>
+                        <span class="orbit-icon" style="--angle: 60deg"><span class="orbit-icon-inner"><i class="devicon-python-plain colored"></i></span></span>
+                        <span class="orbit-icon" style="--angle: 120deg"><span class="orbit-icon-inner"><i class="devicon-flutter-plain colored"></i></span></span>
+                        <span class="orbit-icon" style="--angle: 180deg"><span class="orbit-icon-inner"><i class="devicon-firebase-plain colored"></i></span></span>
+                        <span class="orbit-icon" style="--angle: 240deg"><span class="orbit-icon-inner"><i class="devicon-docker-plain colored"></i></span></span>
+                        <span class="orbit-icon" style="--angle: 300deg"><span class="orbit-icon-inner"><i class="devicon-figma-plain colored"></i></span></span>
+                    </div>
+                    <div class="orbit-ring orbit-ring--inner" aria-hidden="true">
+                        <span class="orbit-icon" style="--angle: 25deg"><span class="orbit-icon-inner"><i class="devicon-typescript-plain colored"></i></span></span>
+                        <span class="orbit-icon" style="--angle: 115deg"><span class="orbit-icon-inner"><i class="devicon-nextjs-plain"></i></span></span>
+                        <span class="orbit-icon" style="--angle: 205deg"><span class="orbit-icon-inner"><i class="devicon-nodejs-plain colored"></i></span></span>
+                        <span class="orbit-icon" style="--angle: 295deg"><span class="orbit-icon-inner"><i class="devicon-postgresql-plain colored"></i></span></span>
+                    </div>
+                    <div class="portrait-frame">
+                        <img src="me.jpeg" alt="Portrait of Clinton Mugisha" width="1035" height="956" fetchpriority="high">
+                    </div>
+                    <figcaption>
+                        <span>Developer / Designer</span>
+                        <span>03+ years</span>
+                    </figcaption>
+                </figure>
 
-                        <!-- Orbit Ring 2 — outer (8 icons) -->
-                        <div class="orbit orbit-2">
-                            <div class="orbit-track"></div>
-                            <div class="orbit-icon" style="--angle: 22deg;"><span class="icon-inner"><i class="devicon-python-plain colored"></i></span></div>
-                            <div class="orbit-icon" style="--angle: 67deg;"><span class="icon-inner"><i class="devicon-flutter-plain colored"></i></span></div>
-                            <div class="orbit-icon" style="--angle: 112deg;"><span class="icon-inner"><i class="devicon-firebase-plain colored"></i></span></div>
-                            <div class="orbit-icon" style="--angle: 157deg;"><span class="icon-inner"><i class="devicon-figma-plain colored"></i></span></div>
-                            <div class="orbit-icon" style="--angle: 202deg;"><span class="icon-inner"><i class="devicon-docker-plain colored"></i></span></div>
-                            <div class="orbit-icon" style="--angle: 247deg;"><span class="icon-inner"><i class="devicon-mongodb-plain colored"></i></span></div>
-                            <div class="orbit-icon" style="--angle: 292deg;"><span class="icon-inner"><i class="devicon-postgresql-plain colored"></i></span></div>
-                            <div class="orbit-icon" style="--angle: 337deg;"><span class="icon-inner"><i class="devicon-git-plain colored"></i></span></div>
-                        </div>
-                    </div>
-                    <div class="hero-social">
-                        <a href="https://github.com/Clinton-mugisha" class="social-link-hero" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/mugisha-clinton-55972b271/" class="social-link-hero" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://wa.me/256703322015" class="social-link-hero" aria-label="WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
+                <div class="hero-index reveal-up" aria-label="Portfolio summary">
+                    <div><strong>20+</strong><span>Projects shipped</span></div>
+                    <div><strong>25+</strong><span>Happy clients</span></div>
+                    <div><strong>100%</strong><span>Care in the details</span></div>
                 </div>
             </div>
+        </section>
+
+        <section class="work-section" id="work" aria-labelledby="work-title">
+            <div class="section-heading">
+                <p class="section-kicker">01 / Selected work</p>
+                <div>
+                    <h2 id="work-title">Built to solve.<br>Designed to stay.</h2>
+                    <p>A focused selection of products across logistics, AI, marketing, and commerce.</p>
+                </div>
+            </div>
+
+            <div class="featured-projects">
+                <article class="project-feature" data-project>
+                    <a class="project-media" href="https://ride-link.com/" target="_blank" rel="noopener noreferrer" aria-label="View the Ridelink website">
+                        <img src="images/optimized/ridel.webp" alt="Ridelink logistics website interface" width="1800" height="907" loading="lazy" decoding="async">
+                        <span class="project-open" aria-hidden="true">↗</span>
+                    </a>
+                    <div class="project-copy">
+                        <div class="project-number">01</div>
+                        <div>
+                            <p class="project-type">Logistics / Web platform / 2026</p>
+                            <h3>Ridelink</h3>
+                            <p>A fast, search-friendly digital home for one of East Africa&rsquo;s growing logistics platforms — designed to make complex services feel simple.</p>
+                        </div>
+                        <ul class="project-tags" aria-label="Technologies used">
+                            <li>Next.js</li><li>GSAP</li><li>SEO</li><li>Motion</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project-feature project-feature--reverse" data-project>
+                    <a class="project-media project-media--plum" href="http://marketingagent101.com" target="_blank" rel="noopener noreferrer" aria-label="View Marketing Agent 101">
+                        <img src="images/optimized/market.webp" alt="Marketing Agent 101 campaign platform interface" width="1800" height="892" loading="lazy" decoding="async">
+                        <span class="project-open" aria-hidden="true">↗</span>
+                    </a>
+                    <div class="project-copy">
+                        <div class="project-number">02</div>
+                        <div>
+                            <p class="project-type">AI marketing / SaaS / 2026</p>
+                            <h3>Marketing Agent 101</h3>
+                            <p>An AI-powered campaign workspace that helps businesses plan and deliver smarter SMS and email marketing from one clear interface.</p>
+                        </div>
+                        <ul class="project-tags" aria-label="Technologies used">
+                            <li>Next.js</li><li>Ollama</li><li>AI</li><li>Automation</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project-feature" data-project>
+                    <a class="project-media project-media--blue" href="http://ai.ride-link.com/" target="_blank" rel="noopener noreferrer" aria-label="View Adrian Logistics AI">
+                        <img src="images/optimized/adrian.webp" alt="Adrian Logistics AI assistant interface" width="1800" height="735" loading="lazy" decoding="async">
+                        <span class="project-open" aria-hidden="true">↗</span>
+                    </a>
+                    <div class="project-copy">
+                        <div class="project-number">03</div>
+                        <div>
+                            <p class="project-type">Artificial intelligence / Logistics / 2026</p>
+                            <h3>Adrian AI</h3>
+                            <p>An intelligent logistics assistant for route planning, fleet decisions, and day-to-day operations — built around useful answers, not AI theatre.</p>
+                        </div>
+                        <ul class="project-tags" aria-label="Technologies used">
+                            <li>Next.js</li><li>Node.js</li><li>Firebase</li><li>MCP</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project-feature project-feature--reverse" data-project>
+                    <a class="project-media project-media--sand" href="https://canary.ride-link.com/" target="_blank" rel="noopener noreferrer" aria-label="View the Ridelink operations platform">
+                        <img src="images/optimized/platform.webp" alt="Ridelink operations platform dashboard" width="1800" height="918" loading="lazy" decoding="async">
+                        <span class="project-open" aria-hidden="true">↗</span>
+                    </a>
+                    <div class="project-copy">
+                        <div class="project-number">04</div>
+                        <div>
+                            <p class="project-type">Operations / Product design / 2025</p>
+                            <h3>Ridelink Platform</h3>
+                            <p>A comprehensive operations product that brings shipments, fleet coordination, and payments into a calmer, more capable workspace.</p>
+                        </div>
+                        <ul class="project-tags" aria-label="Technologies used">
+                            <li>Next.js</li><li>Firebase</li><li>Stripe</li><li>UX</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="archive-section" aria-labelledby="archive-title">
+            <div class="archive-heading">
+                <p class="section-kicker">More things I&rsquo;ve made</p>
+                <h2 id="archive-title">Project archive</h2>
+            </div>
+            <div class="project-archive">
+                <a class="archive-row" href="http://course-adviser.com/" target="_blank" rel="noopener noreferrer"><span class="archive-index">05</span><span class="archive-name">Course Adviser</span><span class="archive-category">Education / AI</span><span class="archive-year">2026</span><span class="archive-arrow">↗</span></a>
+                <a class="archive-row" href="http://elacargo.vercel.app" target="_blank" rel="noopener noreferrer"><span class="archive-index">06</span><span class="archive-name">ELA Cargo</span><span class="archive-category">Logistics / Web</span><span class="archive-year">2025</span><span class="archive-arrow">↗</span></a>
+                <a class="archive-row" href="https://tracking.ride-link.com/" target="_blank" rel="noopener noreferrer"><span class="archive-index">07</span><span class="archive-name">Package Tracking</span><span class="archive-category">Utility / Web app</span><span class="archive-year">2025</span><span class="archive-arrow">↗</span></a>
+                <a class="archive-row" href="https://tax.ride-link.com/" target="_blank" rel="noopener noreferrer"><span class="archive-index">08</span><span class="archive-name">Uganda Tax Calculator</span><span class="archive-category">Fintech / Utility</span><span class="archive-year">2025</span><span class="archive-arrow">↗</span></a>
+                <a class="archive-row" href="https://ecom-seven-lake.vercel.app/" target="_blank" rel="noopener noreferrer"><span class="archive-index">09</span><span class="archive-name">E-Commerce Platform</span><span class="archive-category">Commerce / Full-stack</span><span class="archive-year">2025</span><span class="archive-arrow">↗</span></a>
+                <a class="archive-row" href="https://www.fountconsult.com/" target="_blank" rel="noopener noreferrer"><span class="archive-index">10</span><span class="archive-name">Fount Consult</span><span class="archive-category">Consulting / Web</span><span class="archive-year">2024</span><span class="archive-arrow">↗</span></a>
+                <a class="archive-row" href="https://infinitytoursandtravel.vercel.app/" target="_blank" rel="noopener noreferrer"><span class="archive-index">11</span><span class="archive-name">Infinity Tours</span><span class="archive-category">Travel / Booking</span><span class="archive-year">2024</span><span class="archive-arrow">↗</span></a>
+                <a class="archive-row" href="https://play.google.com/store/apps/details?id=com.ridelink.app&hl=en" target="_blank" rel="noopener noreferrer"><span class="archive-index">12</span><span class="archive-name">Ridelink Mobile</span><span class="archive-category">Flutter / Mobile</span><span class="archive-year">2024</span><span class="archive-arrow">↗</span></a>
+            </div>
+        </section>
+
+        <section class="about-section" id="about" aria-labelledby="about-title">
+            <div class="about-heading">
+                <p class="section-kicker">02 / Profile</p>
+                <h2 id="about-title">Code brain.<br><span>Design eye.</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-statement">
+                    <p>I work across product strategy, interface design, and full-stack development. That means fewer gaps between the idea, the design, and the thing people actually use.</p>
+                    <p>For the past three years, I&rsquo;ve helped teams turn operational problems and early concepts into polished products — always with clarity, performance, and people at the centre.</p>
+                    <div class="about-actions">
+                        <a class="button button--light" href="mailto:mugishaclinton412@gmail.com">Start a conversation <span>↗</span></a>
+                        <a class="plain-link" href="https://www.linkedin.com/in/mugisha-clinton-55972b271/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                    </div>
+                </div>
+                <div class="capabilities">
+                    <article><span>01</span><h3>Product design</h3><p>Research, user flows, wireframes, prototypes, and high-fidelity interface systems.</p></article>
+                    <article><span>02</span><h3>Web development</h3><p>Responsive, fast, accessible websites and applications built with modern frameworks.</p></article>
+                    <article><span>03</span><h3>Mobile products</h3><p>Cross-platform product experiences using Flutter and React Native.</p></article>
+                    <article><span>04</span><h3>AI integrations</h3><p>Useful AI workflows, assistants, and automations embedded into real products.</p></article>
+                </div>
+            </div>
+            <div class="toolkit" aria-label="Selected toolkit">
+                <p>Selected toolkit</p>
+                <div class="toolkit-list">
+                    <span>JavaScript</span><span>TypeScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>Python</span><span>Flutter</span><span>Firebase</span><span>PostgreSQL</span><span>Figma</span><span>GSAP</span><span>Docker</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact" aria-labelledby="contact-title">
+            <div class="contact-top">
+                <p class="section-kicker">03 / Contact</p>
+                <p>Have a project in mind?</p>
+            </div>
+            <div class="contact-main">
+                <h2 id="contact-title">Let&rsquo;s make<br><span>something good.</span></h2>
+                <a class="contact-orb" href="mailto:mugishaclinton412@gmail.com" aria-label="Send Clinton an email">
+                    <img src="me.jpeg" alt="" width="1035" height="956" loading="lazy" decoding="async">
+                    <span class="contact-orb-shade" aria-hidden="true"></span>
+                    <span class="contact-orb-label">Get in touch</span>
+                    <span class="contact-orb-arrow" aria-hidden="true">↗</span>
+                </a>
+            </div>
+            <div class="contact-details">
+                <div><span>Email</span><a href="mailto:mugishaclinton412@gmail.com">mugishaclinton412@gmail.com</a></div>
+                <div><span>Phone / WhatsApp</span><a href="https://wa.me/256703322015" target="_blank" rel="noopener noreferrer">+256 703 322 015</a></div>
+                <div><span>Based in</span><p>Kampala, Uganda</p></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span data-year>2026</span> Clinton Mugisha</p>
+        <div>
+            <a href="https://github.com/Clinton-mugisha" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/mugisha-clinton-55972b271/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a href="#home">Back to top ↑</a>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">About</span>
-                <h2 class="section-title" data-split>A developer who cares<br>about the details.</h2>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a dedicated software developer with a keen eye for design. Over the past 3 years, 
-                        I've been crafting digital solutions that not only function flawlessly but also 
-                        provide exceptional user experiences.
-                    </p>
-                    <p>
-                        My journey combines the technical precision of software development with the 
-                        creative intuition of UI/UX design. I believe great applications are born 
-                        from the perfect marriage of functionality and aesthetics.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-number">3+</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">20+</span>
-                            <span class="stat-label">Projects Completed</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Client Satisfaction</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-services">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-code"></i></div>
-                        <h3>Full-Stack Development</h3>
-                        <p>End-to-end web applications built with modern frameworks and best practices.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
-                        <h3>Mobile Apps</h3>
-                        <p>Cross-platform mobile applications using Flutter and React Native.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
-                        <h3>UI/UX Design</h3>
-                        <p>User-centered design with research-backed interfaces that convert.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-search"></i></div>
-                        <h3>User Research</h3>
-                        <p>Data-driven insights to create products people genuinely enjoy using.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Skills</span>
-                <h2 class="section-title" data-split>Technologies I work with.</h2>
-                <p class="section-subtitle">A versatile toolkit spanning frontend, backend, mobile, and design.</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">JavaScript</span>
-                        <span class="skill-item">React</span>
-                        <span class="skill-item">Next.js</span>
-                        <span class="skill-item">Vue.js</span>
-                        <span class="skill-item">TypeScript</span>
-                        <span class="skill-item">HTML5</span>
-                        <span class="skill-item">CSS3/SASS</span>
-                        <span class="skill-item">Bootstrap</span>
-                        <span class="skill-item">Tailwind CSS</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-server"></i> Backend</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Node.js</span>
-                        <span class="skill-item">Python</span>
-                        <span class="skill-item">Express.js</span>
-                        <span class="skill-item">PHP</span>
-                        <span class="skill-item">Laravel</span>
-                        <span class="skill-item">REST APIs</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-mobile-alt"></i> Mobile</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">React Native</span>
-                        <span class="skill-item">Flutter</span>
-                        <span class="skill-item">Android</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Databases</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Firebase</span>
-                        <span class="skill-item">Supabase</span>
-                        <span class="skill-item">MongoDB</span>
-                        <span class="skill-item">PostgreSQL</span>
-                        <span class="skill-item">MySQL</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-paint-brush"></i> Design</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Figma</span>
-                        <span class="skill-item">User Research</span>
-                        <span class="skill-item">Wireframing</span>
-                        <span class="skill-item">Prototyping</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Tools</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Git</span>
-                        <span class="skill-item">Docker</span>
-                        <span class="skill-item">AWS</span>
-                        <span class="skill-item">Spline</span>
-                        <span class="skill-item">SEO</span>
-                        <span class="skill-item">SEM</span>
-                        <span class="skill-item">Content Marketing</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Work</span>
-                <h2 class="section-title" data-split>Selected projects.</h2>
-                <p class="section-subtitle">A collection of recent work across web, mobile, and design.</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/ridel.png" alt="Ridelink Website">
-                        <div class="project-overlay">
-                            <a href="https://ride-link.com/" class="project-link" target="_blank">
-                                View Project <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Ridelink website</h3>
-                        <p>Website for Ridelink, providing information and services related to logistics and transportation.</p>
-                        <div class="project-tech">
-                            <span>Next.js</span>
-                            <span>Frame rendering</span>
-                            <span>SEO</span>
-                            <span>GSAP</span>
-                       
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/market.png" alt="Marketingagent101">
-                        <div class="project-overlay">
-                            <a href="http://marketingagent101.com" class="project-link" target="_blank">
-                                View Project <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Marketingagent101</h3>
-                        <p>Platform, providing marketing services and solutions to business with both SMS and email AI powered campaigns.</p>
-                        <div class="project-tech">
-                            <span>Next.js</span>
-                            <span>Dgateway</span>
-                            <span>Ollama</span>
-                            <span>Cherrio</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/Screenshot from 2026-01-22 10-22-12.png" alt="Adrian Logistics AI">
-                        <div class="project-overlay">
-                            <a href="http://ai.ride-link.com/" class="project-link" target="_blank">
-                                View Project <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Adrian Logistics AI</h3>
-                        <p>AI-powered logistics management system for intelligent route optimization and fleet management.</p>
-                        <div class="project-tech">
-                            <span>Next.js</span>
-                            <span>Node.js</span>
-                            <span>Firebase</span>
-                            <span>MCP</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/course.png" alt="Course Adviser">
-                        <div class="project-overlay">
-                            <a href="http://course-adviser.com/" class="project-link" target="_blank">
-                                View Project <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Course Adviser</h3>
-                        <p>Course recommendation system for personalized learning paths and academic guidance.</p>
-                        <div class="project-tech">
-                            <span>Next.js</span>
-                            <span>Node.js</span>
-                            <span>Firebase</span>
-                       
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/ela.png" alt="ELA Cargo Website">
-                        <div class="project-overlay">
-                            <a href="http://elacargo.vercel.app" class="project-link" target="_blank">
-                                View Project <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>ELA Cargo Website</h3>
-                        <p>Website for ELA Cargo, providing information and services related to logistics and transportation.</p>
-                        <div class="project-tech">
-                            <span>React.js</span>
-                            <span>TypeScript</span>
-                            <span>Vite</span>
-                       
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/platform.png" alt="Ridelink Platform">
-                        <div class="project-overlay">
-                            <a href="https://canary.ride-link.com/" class="project-link" target="_blank">
-                                View Project <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Ridelink Platform</h3>
-                        <p>Comprehensive platform for managing logistics operations and fleet coordination.</p>
-                        <div class="project-tech">
-                            <span>Next.js</span>
-                            <span>Node.js</span>
-                            <span>Firebase</span>
-                            <span>Stripe</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/fount.png" alt="Fount Consult">
-                        <div class="project-overlay">
-                            <a href="https://www.fountconsult.com/" class="project-link" target="_blank">
-                                View Project <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Fount Consult</h3>
-                        <p>Professional consultancy website with a clean, corporate design language.</p>
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>Cloudflare</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/nexus.png" alt="Nexus Logistics Africa">
-                        <div class="project-overlay">
-                            <a href="https://www.nexusminerals.org/" class="project-link" target="_blank">
-                                View Project <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Nexus Logistics Africa</h3>
-                        <p>Logistics website for minerals and logistics operations across Africa.</p>
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>Squarespace</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/ecom.png" alt="E-Commerce Platform">
-                        <div class="project-overlay">
-                            <a href="https://ecom-seven-lake.vercel.app/" class="project-link" target="_blank">
-                                View Project <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>E-Commerce Platform</h3>
-                        <p>Full-stack e-commerce with authentication, vendor platform, and admin dashboard.</p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>Firebase</span>
-                            <span>Stripe</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/tracking.png" alt="Package Tracking">
-                        <div class="project-overlay">
-                            <a href="https://tracking.ride-link.com/" class="project-link" target="_blank">
-                                View Project <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Package Tracking</h3>
-                        <p>Track cargo across 1560+ couriers with airwaybill, bill of lading, or tracking number.</p>
-                        <div class="project-tech">
-                            <span>Next.js</span>
-                            <span>Node.js</span>
-                            <span>Firebase</span>
-                            <span>REST APIs</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/tax.png" alt="Tax Calculator">
-                        <div class="project-overlay">
-                            <a href="https://tax.ride-link.com/" class="project-link" target="_blank">
-                                View Project <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Tax Calculator</h3>
-                        <p>Comprehensive tax tool for general goods and vehicles in Uganda.</p>
-                        <div class="project-tech">
-                            <span>Next.js</span>
-                            <span>Node.js</span>
-                            <span>Firebase</span>
-                            <span>REST APIs</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/infinity.png" alt="Infinity Tours & Travel">
-                        <div class="project-overlay">
-                            <a href="https://infinitytoursandtravel.vercel.app/" class="project-link" target="_blank">
-                                View Project <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Infinity Tours & Travel</h3>
-                        <p>Tourism business website with booking features and destination showcases.</p>
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/avias.png" alt="African Visual Artist Associate">
-                        <div class="project-overlay">
-                            <a href="https://africanvisualartistsassociates.vercel.app/" class="project-link" target="_blank">
-                                View Project <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>African Visual Artists</h3>
-                        <p>NGO platform raising awareness about climate change through visual art.</p>
-                        <div class="project-tech">
-                            <span>React</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/ridelink.jpeg" alt="Ridelink App">
-                        <div class="project-overlay">
-                            <a href="https://play.google.com/store/apps/details?id=com.ridelink.app&hl=en" class="project-link" target="_blank">
-                                View Project <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Ridelink App</h3>
-                        <p>Mobile app connecting clients to trusted transporters with real-time tracking.</p>
-                        <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>Firebase</span>
-                            <span>Google Maps</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/tagtail.jpeg" alt="Tagtail App">
-                        <div class="project-overlay">
-                            <a href="https://play.google.com/store/apps/details?id=com.trailtag.app&hl=en" class="project-link" target="_blank">
-                                View Project <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Tagtail App</h3>
-                        <p>Real-time transporter tracking so clients always stay in the loop.</p>
-                        <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>Firebase</span>
-                            <span>Google Maps</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Contact</span>
-                <h2 class="section-title" data-split>Let's work together.</h2>
-                <p class="section-subtitle">Have a project in mind? I'd love to hear about it.</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <a href="mailto:mugishaclinton412@gmail.com">mugishaclinton412@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Phone</h3>
-                            <a href="tel:+256703322015">+256 703 322 015</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Location</h3>
-                            <p>Kampala, Uganda</p>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form" action="https://formspree.io/f/mqadnkkv" method="POST">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-full">
-                        Send Message
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <div class="footer-logo">Clinton<span>.dev</span></div>
-                    <p class="footer-text">&copy; 2026 Clinton Mugisha. All rights reserved.</p>
-                </div>
-                <div class="footer-right">
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/mugisha-clinton-55972b271/" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/Clinton-mugisha" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://wa.me/256703322015" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <p>Designed &amp; built with intention.</p>
     </footer>
 
-    <!-- Lenis Smooth Scroll -->
-    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
-    <!-- GSAP + ScrollTrigger -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
