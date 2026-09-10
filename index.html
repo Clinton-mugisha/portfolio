@@ -1,289 +1,652 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Clinton Mugisha is a software developer and product designer in Kampala, building thoughtful web, mobile, and AI-powered digital products.">
-    <meta name="keywords" content="Software Developer, Product Designer, UI/UX Designer, Clinton Mugisha, Kampala, Uganda">
-    <meta name="author" content="Clinton Mugisha">
-    <meta name="theme-color" content="#11110f">
-    <meta property="og:title" content="Clinton Mugisha — Developer & Product Designer">
-    <meta property="og:description" content="Thoughtful digital products, built from first idea to final interaction.">
-    <meta property="og:image" content="me.jpeg">
-    <title>Clinton Mugisha — Developer & Product Designer</title>
-    <link rel="shortcut icon" type="image/png" href="logo1.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
-    <link rel="stylesheet" href="styles_homepage.css">
-</head>
-<body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header" data-header>
-        <a class="brand" href="#home" aria-label="Clinton Mugisha, home">
-            <span class="brand-mark">CM</span>
-            <span class="brand-name">Clinton Mugisha</span>
-        </a>
-
-        <nav class="desktop-nav" aria-label="Primary navigation">
-            <a href="#work">Work</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-
-        <a class="header-cta" href="mailto:mugishaclinton412@gmail.com">
-            <span>Let&rsquo;s talk</span>
-            <span aria-hidden="true">↗</span>
-        </a>
-
-        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-            <span></span><span></span>
-        </button>
-    </header>
-
-    <div class="mobile-menu" id="mobile-menu" aria-hidden="true" inert>
-        <nav aria-label="Mobile navigation">
-            <a href="#work"><span>01</span> Work</a>
-            <a href="#about"><span>02</span> About</a>
-            <a href="#contact"><span>03</span> Contact</a>
-        </nav>
-        <div class="mobile-menu-footer">
-            <p>Kampala, Uganda</p>
-            <a href="mailto:mugishaclinton412@gmail.com">mugishaclinton412@gmail.com</a>
-        </div>
-    </div>
-
-    <main id="main">
-        <section class="hero" id="home" aria-labelledby="hero-title">
-            <div class="hero-topline reveal-up">
-                <p class="eyebrow"><span class="status-dot"></span> Available for select projects</p>
-                <p class="hero-location">Kampala, Uganda <span>—</span> <span data-local-time>00:00 EAT</span></p>
-            </div>
-
-            <div class="hero-grid">
-                <div class="hero-heading-wrap">
-                    <p class="hero-byline reveal-up">Clinton Mugisha <span>/ Developer &amp; designer</span></p>
-                    <h1 class="hero-title" id="hero-title">
-                        <span class="title-line"><span>Good ideas.</span></span>
-                        <span class="title-line"><span>Great digital</span></span>
-                        <span class="title-line title-line--accent"><span>experiences.</span></span>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Clinton Mugisha is a software developer and product designer in Kampala, building thoughtful web, mobile, and AI-powered digital products."
+        />
+        <meta
+            name="keywords"
+            content="Software Developer, Product Designer, UI/UX Designer, Clinton Mugisha, Kampala, Uganda"
+        />
+        <meta name="author" content="Clinton Mugisha" />
+        <meta name="theme-color" content="#f4f1e9" />
+        <meta
+            property="og:title"
+            content="Clinton Mugisha — Developer & Product Designer"
+        />
+        <meta
+            property="og:description"
+            content="Thoughtful digital products, built from first idea to final interaction."
+        />
+        <meta property="og:image" content="me.jpeg" />
+        <title>Clinton Mugisha — Developer & Product Designer</title>
+        <link rel="shortcut icon" type="image/png" href="logo1.png" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css"
+        />
+        <link rel="stylesheet" href="styles_homepage.css" />
+        <link
+            rel="preload"
+            href="fonts/anton-latin.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+    </head>
+    <body>
+        <a class="skip-link" href="#main">Skip to content</a>
+        <header class="site-header">
+            <a class="brand" href="#home" aria-label="Clinton Mugisha, home"
+                >clinton<span>.</span></a
+            >
+            <nav aria-label="Main navigation">
+                <a href="#work">Work</a>
+                <a class="nav-about" href="#about">About</a>
+                <a class="nav-stack" href="#stack">Stack</a>
+                <a class="nav-contact" href="#contact"
+                    >Let’s talk <span aria-hidden="true">↗</span></a
+                >
+            </nav>
+        </header>
+        <main id="main">
+            <section class="hero" id="home" aria-labelledby="hero-title">
+                <div class="hero-heading">
+                    <p class="hero-name">Hey, I’m Clinton.</p>
+                    <h1 id="hero-title">
+                        <span class="title-line"><span>I DESIGN.</span></span
+                        ><span class="title-line title-line--accent"
+                            ><span>I DEVELOP.</span></span
+                        >
                     </h1>
                 </div>
-
-                <div class="hero-intro reveal-up">
-                    <p>I turn ambitious ideas into digital products that feel as good as they work. From the first sketch to the final line of code.</p>
-                </div>
-                <div class="hero-actions reveal-up">
-                    <a class="button button--acid" href="#work">Explore my work <span aria-hidden="true">↘</span></a>
-                    <a class="text-link" href="mailto:mugishaclinton412@gmail.com">Let&rsquo;s talk <span aria-hidden="true">↗</span></a>
-                </div>
-
-                <figure class="portrait-card reveal-up">
-                    <div class="orbit-ring orbit-ring--outer" aria-hidden="true">
-                        <span class="orbit-icon" style="--angle: 0deg"><span class="orbit-icon-inner"><i class="devicon-react-original colored"></i></span></span>
-                        <span class="orbit-icon" style="--angle: 60deg"><span class="orbit-icon-inner"><i class="devicon-python-plain colored"></i></span></span>
-                        <span class="orbit-icon" style="--angle: 120deg"><span class="orbit-icon-inner"><i class="devicon-flutter-plain colored"></i></span></span>
-                        <span class="orbit-icon" style="--angle: 180deg"><span class="orbit-icon-inner"><i class="devicon-firebase-plain colored"></i></span></span>
-                        <span class="orbit-icon" style="--angle: 240deg"><span class="orbit-icon-inner"><i class="devicon-docker-plain colored"></i></span></span>
-                        <span class="orbit-icon" style="--angle: 300deg"><span class="orbit-icon-inner"><i class="devicon-figma-plain colored"></i></span></span>
+                <figure class="portrait-card">
+                    <div
+                        class="orbit-ring orbit-ring--outer"
+                        aria-hidden="true"
+                    >
+                        <span class="orbit-icon" style="--angle: 0deg"
+                            ><span class="orbit-icon-inner"
+                                ><i class="devicon-react-original"></i></span
+                        ></span>
+                        <span class="orbit-icon" style="--angle: 60deg"
+                            ><span class="orbit-icon-inner"
+                                ><i class="devicon-python-plain"></i></span
+                        ></span>
+                        <span class="orbit-icon" style="--angle: 120deg"
+                            ><span class="orbit-icon-inner"
+                                ><i class="devicon-flutter-plain"></i></span
+                        ></span>
+                        <span class="orbit-icon" style="--angle: 180deg"
+                            ><span class="orbit-icon-inner"
+                                ><i class="devicon-firebase-plain"></i></span
+                        ></span>
+                        <span class="orbit-icon" style="--angle: 240deg"
+                            ><span class="orbit-icon-inner"
+                                ><i class="devicon-docker-plain"></i></span
+                        ></span>
+                        <span class="orbit-icon" style="--angle: 300deg"
+                            ><span class="orbit-icon-inner"
+                                ><i class="devicon-figma-plain"></i></span
+                        ></span>
                     </div>
-                    <div class="orbit-ring orbit-ring--inner" aria-hidden="true">
-                        <span class="orbit-icon" style="--angle: 25deg"><span class="orbit-icon-inner"><i class="devicon-typescript-plain colored"></i></span></span>
-                        <span class="orbit-icon" style="--angle: 115deg"><span class="orbit-icon-inner"><i class="devicon-nextjs-plain"></i></span></span>
-                        <span class="orbit-icon" style="--angle: 205deg"><span class="orbit-icon-inner"><i class="devicon-nodejs-plain colored"></i></span></span>
-                        <span class="orbit-icon" style="--angle: 295deg"><span class="orbit-icon-inner"><i class="devicon-postgresql-plain colored"></i></span></span>
+                    <div
+                        class="orbit-ring orbit-ring--inner"
+                        aria-hidden="true"
+                    >
+                        <span class="orbit-icon" style="--angle: 25deg"
+                            ><span class="orbit-icon-inner"
+                                ><i class="devicon-typescript-plain"></i></span
+                        ></span>
+                        <span class="orbit-icon" style="--angle: 115deg"
+                            ><span class="orbit-icon-inner"
+                                ><i class="devicon-nextjs-plain"></i></span
+                        ></span>
+                        <span class="orbit-icon" style="--angle: 205deg"
+                            ><span class="orbit-icon-inner"
+                                ><i class="devicon-nodejs-plain"></i></span
+                        ></span>
+                        <span class="orbit-icon" style="--angle: 295deg"
+                            ><span class="orbit-icon-inner"
+                                ><i class="devicon-postgresql-plain"></i></span
+                        ></span>
                     </div>
                     <div class="portrait-frame">
-                        <img src="me.jpeg" alt="Portrait of Clinton Mugisha" width="1035" height="956" fetchpriority="high">
+                        <img
+                            src="me.jpeg"
+                            alt="Portrait of Clinton Mugisha"
+                            width="1035"
+                            height="956"
+                            fetchpriority="high"
+                        />
                     </div>
-                    <figcaption>
-                        <span><span class="status-dot"></span> A little design. A lot of possibility.</span>
-                        <span class="portrait-coordinate" aria-hidden="true">0°18′ N / 32°35′ E</span>
-                    </figcaption>
                 </figure>
-
-            </div>
-
-            <div class="hero-footer reveal-up">
-                <div class="hero-index" aria-label="Portfolio summary">
-                    <div><strong>20+</strong><span>Projects shipped</span></div>
-                    <div><strong>25+</strong><span>Happy clients</span></div>
-                    <div><strong>03+</strong><span>Years of building</span></div>
+                <div class="hero-intro">
+                    <p>
+                        A software developer with a designer’s eye.<br />I bring
+                        websites, apps, and ambitious ideas to life.
+                    </p>
+                    <a class="button" href="#work"
+                        >See the work <span aria-hidden="true">↘</span></a
+                    >
                 </div>
-                <div class="hero-footer-actions">
-                    <button class="motion-toggle" type="button" aria-pressed="false" hidden><span aria-hidden="true">Ⅱ</span> <span data-motion-label>Pause orbits</span></button>
-                    <a class="hero-scroll" href="#work">Scroll to explore <span aria-hidden="true">↓</span></a>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="work-section" id="work" aria-labelledby="work-title">
-            <div class="section-heading">
-                <p class="section-kicker">01 / Selected work</p>
+            <section
+                class="work-section"
+                id="work"
+                aria-labelledby="work-title"
+            >
+                <div class="work-heading" data-reveal>
+                    <h2 id="work-title">
+                        THE WORK<span class="heading-dot">.</span>
+                    </h2>
+                    <p>From “what if” to out in the world.</p>
+                </div>
+                <div class="project-grid">
+                    <article class="project project--ridelink" data-reveal>
+                        <a
+                            class="project-link"
+                            href="https://ride-link.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Visit Ridelink"
+                        >
+                            <div class="project-heading">
+                                <div>
+                                    <h3>Ridelink</h3>
+                                    <p>Moving Africa forward.</p>
+                                </div>
+                                <span class="project-arrow" aria-hidden="true"
+                                    >↗</span
+                                >
+                            </div>
+                            <div class="project-stage">
+                                <span
+                                    class="project-backdrop"
+                                    aria-hidden="true"
+                                    >MOVE.</span
+                                >
+                                <div class="browser-frame">
+                                    <div class="browser-bar" aria-hidden="true">
+                                        <span></span><span></span><span></span
+                                        ><i></i>
+                                    </div>
+                                    <img
+                                        src="images/optimized/ridel.webp"
+                                        alt="Ridelink website showing its logistics services"
+                                        width="1800"
+                                        height="907"
+                                        loading="lazy"
+                                        decoding="async"
+                                    />
+                                </div>
+                            </div>
+                            <div class="project-footer">
+                                <span>Web design &amp; development</span
+                                ><span>Next.js</span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="project project--marketing" data-reveal>
+                        <a
+                            class="project-link"
+                            href="http://marketingagent101.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Visit Marketing Agent 101"
+                        >
+                            <div class="project-heading">
+                                <div>
+                                    <h3>Marketing 101</h3>
+                                    <p>A smarter way to reach people.</p>
+                                </div>
+                                <span class="project-arrow" aria-hidden="true"
+                                    >↗</span
+                                >
+                            </div>
+                            <div class="project-stage">
+                                <div class="stage-orb" aria-hidden="true"></div>
+                                <div class="browser-frame">
+                                    <div class="browser-bar" aria-hidden="true">
+                                        <span></span><span></span><span></span
+                                        ><i></i>
+                                    </div>
+                                    <img
+                                        src="images/optimized/market.webp"
+                                        alt="Marketing Agent 101 AI campaign workspace"
+                                        width="1800"
+                                        height="892"
+                                        loading="lazy"
+                                        decoding="async"
+                                    />
+                                </div>
+                            </div>
+                            <div class="project-footer">
+                                <span>AI &amp; product development</span
+                                ><span>Next.js · Ollama</span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="project project--adrian" data-reveal>
+                        <a
+                            class="project-link"
+                            href="http://ai.ride-link.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Visit Adrian AI"
+                        >
+                            <div class="project-heading">
+                                <div>
+                                    <h3>Adrian AI</h3>
+                                    <p>Complex logistics. Simple answers.</p>
+                                </div>
+                                <span class="project-arrow" aria-hidden="true"
+                                    >↗</span
+                                >
+                            </div>
+                            <div class="project-stage">
+                                <span class="stage-asterisk" aria-hidden="true"
+                                    >✳</span
+                                >
+                                <div class="browser-frame">
+                                    <div class="browser-bar" aria-hidden="true">
+                                        <span></span><span></span><span></span
+                                        ><i></i>
+                                    </div>
+                                    <img
+                                        src="images/optimized/adrian.webp"
+                                        alt="Adrian AI logistics assistant interface"
+                                        width="1800"
+                                        height="735"
+                                        loading="lazy"
+                                        decoding="async"
+                                    />
+                                </div>
+                            </div>
+                            <div class="project-footer">
+                                <span>AI assistant &amp; interface</span
+                                ><span>Node.js · Firebase</span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="project project--platform" data-reveal>
+                        <a
+                            class="project-link"
+                            href="https://canary.ride-link.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Visit Ridelink Platform"
+                        >
+                            <div class="project-heading">
+                                <div>
+                                    <h3>Ridelink Platform</h3>
+                                    <p>One place. Everything moving.</p>
+                                </div>
+                                <span class="project-arrow" aria-hidden="true"
+                                    >↗</span
+                                >
+                            </div>
+                            <div class="project-stage">
+                                <span
+                                    class="project-backdrop"
+                                    aria-hidden="true"
+                                    >IN SYNC.</span
+                                >
+                                <div class="browser-frame">
+                                    <div class="browser-bar" aria-hidden="true">
+                                        <span></span><span></span><span></span
+                                        ><i></i>
+                                    </div>
+                                    <img
+                                        src="images/optimized/platform.webp"
+                                        alt="Ridelink product platform website"
+                                        width="1800"
+                                        height="918"
+                                        loading="lazy"
+                                        decoding="async"
+                                    />
+                                </div>
+                            </div>
+                            <div class="project-footer">
+                                <span>Product design &amp; development</span
+                                ><span>Next.js · Stripe</span>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+                <details class="more-projects">
+                    <summary>
+                        There’s more where that came from
+                        <span aria-hidden="true">+</span>
+                    </summary>
+                    <div class="more-projects-grid">
+                        <a
+                            class="extra-project"
+                            href="http://course-adviser.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ><div class="extra-preview">
+                                <img
+                                    src="images/course.png"
+                                    alt="Course Adviser preview"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </div>
+                            <h3>
+                                Course Adviser<span aria-hidden="true">↗</span>
+                            </h3>
+                            <p>Education / AI</p></a
+                        >
+                        <a
+                            class="extra-project"
+                            href="https://tracking.ride-link.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ><div class="extra-preview">
+                                <img
+                                    src="images/tracking.png"
+                                    alt="Package Tracking preview"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </div>
+                            <h3>
+                                Package Tracking<span aria-hidden="true"
+                                    >↗</span
+                                >
+                            </h3>
+                            <p>Utility / Web app</p></a
+                        >
+                        <a
+                            class="extra-project"
+                            href="https://tax.ride-link.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ><div class="extra-preview">
+                                <img
+                                    src="images/tax.png"
+                                    alt="Uganda Tax Calculator preview"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </div>
+                            <h3>
+                                Uganda Tax Calculator<span aria-hidden="true"
+                                    >↗</span
+                                >
+                            </h3>
+                            <p>Fintech / Utility</p></a
+                        >
+                        <a
+                            class="extra-project"
+                            href="https://ecom-seven-lake.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ><div class="extra-preview">
+                                <img
+                                    src="images/ecom.png"
+                                    alt="E-Commerce Platform preview"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </div>
+                            <h3>
+                                E-Commerce Platform<span aria-hidden="true"
+                                    >↗</span
+                                >
+                            </h3>
+                            <p>Commerce / Full-stack</p></a
+                        >
+                        <a
+                            class="extra-project"
+                            href="https://www.fountconsult.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ><div class="extra-preview">
+                                <img
+                                    src="images/fount.png"
+                                    alt="Fount Consult preview"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </div>
+                            <h3>
+                                Fount Consult<span aria-hidden="true">↗</span>
+                            </h3>
+                            <p>Consulting / Web</p></a
+                        >
+                        <a
+                            class="extra-project"
+                            href="https://infinitytoursandtravel.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ><div class="extra-preview">
+                                <img
+                                    src="images/infinity.png"
+                                    alt="Infinity Tours preview"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </div>
+                            <h3>
+                                Infinity Tours<span aria-hidden="true">↗</span>
+                            </h3>
+                            <p>Travel / Booking</p></a
+                        >
+                        <a
+                            class="extra-project"
+                            href="https://play.google.com/store/apps/details?id=com.ridelink.app&hl=en"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ><div class="extra-preview">
+                                <img
+                                    src="images/ridelink.jpeg"
+                                    alt="Ridelink Mobile preview"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </div>
+                            <h3>
+                                Ridelink Mobile<span aria-hidden="true"
+                                    >↗</span
+                                >
+                            </h3>
+                            <p>Flutter / Mobile</p></a
+                        >
+                    </div>
+                </details>
+            </section>
+
+            <section
+                class="about-section"
+                id="about"
+                aria-labelledby="about-title"
+            >
+                <div class="profile-grid" data-reveal>
+                    <h2 id="about-title">IDEA TO<br /><span>REALITY.</span></h2>
+                    <div class="profile-copy">
+                        <p>
+                            I’m Clinton. I design and build web, mobile, and AI
+                            products—from the first sketch to launch.
+                        </p>
+                        <div class="profile-facts">
+                            <div>
+                                <strong>3+</strong><span>Years building</span>
+                            </div>
+                            <div>
+                                <strong>20+</strong
+                                ><span>Projects shipped</span>
+                            </div>
+                            <a
+                                href="https://www.linkedin.com/in/mugisha-clinton-55972b271/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Clinton on LinkedIn"
+                                >↗</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="stack-section"
+                    id="stack"
+                    aria-labelledby="stack-title"
+                >
+                    <h2 id="stack-title" data-reveal>MY STACK<span>.</span></h2>
+                    <ul
+                        class="stack-grid"
+                        aria-label="Technologies I work with"
+                    >
+                        <li class="stack-tile">
+                            <i
+                                class="devicon-javascript-plain"
+                                aria-hidden="true"
+                            ></i
+                            ><span>JavaScript</span>
+                        </li>
+                        <li class="stack-tile">
+                            <i
+                                class="devicon-typescript-plain"
+                                aria-hidden="true"
+                            ></i
+                            ><span>TypeScript</span>
+                        </li>
+                        <li class="stack-tile">
+                            <i
+                                class="devicon-react-original"
+                                aria-hidden="true"
+                            ></i
+                            ><span>React</span>
+                        </li>
+                        <li class="stack-tile">
+                            <i
+                                class="devicon-nextjs-plain"
+                                aria-hidden="true"
+                            ></i
+                            ><span>Next.js</span>
+                        </li>
+                        <li class="stack-tile">
+                            <i
+                                class="devicon-nodejs-plain"
+                                aria-hidden="true"
+                            ></i
+                            ><span>Node.js</span>
+                        </li>
+                        <li class="stack-tile">
+                            <i
+                                class="devicon-python-plain"
+                                aria-hidden="true"
+                            ></i
+                            ><span>Python</span>
+                        </li>
+                        <li class="stack-tile">
+                            <i
+                                class="devicon-flutter-plain"
+                                aria-hidden="true"
+                            ></i
+                            ><span>Flutter</span>
+                        </li>
+                        <li class="stack-tile">
+                            <i
+                                class="devicon-firebase-plain"
+                                aria-hidden="true"
+                            ></i
+                            ><span>Firebase</span>
+                        </li>
+                        <li class="stack-tile">
+                            <i
+                                class="devicon-postgresql-plain"
+                                aria-hidden="true"
+                            ></i
+                            ><span>PostgreSQL</span>
+                        </li>
+                        <li class="stack-tile">
+                            <i
+                                class="devicon-figma-plain"
+                                aria-hidden="true"
+                            ></i
+                            ><span>Figma</span>
+                        </li>
+                        <li class="stack-tile">
+                            <span class="stack-symbol" aria-hidden="true"
+                                >↯</span
+                            ><span>GSAP</span>
+                        </li>
+                        <li class="stack-tile">
+                            <i
+                                class="devicon-docker-plain"
+                                aria-hidden="true"
+                            ></i
+                            ><span>Docker</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section
+                class="contact-section"
+                id="contact"
+                aria-labelledby="contact-title"
+            >
+                <p class="contact-intro" data-reveal>Got something in mind?</p>
+                <div class="contact-heading" data-reveal>
+                    <h2 id="contact-title">
+                        LET’S MAKE<br />IT HAPPEN<span>.</span>
+                    </h2>
+                    <a
+                        class="contact-circle"
+                        href="mailto:mugishaclinton412@gmail.com"
+                        ><span>Let’s talk</span
+                        ><span aria-hidden="true">↗</span></a
+                    >
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:mugishaclinton412@gmail.com"
+                        >mugishaclinton412@gmail.com
+                        <span aria-hidden="true">↗</span></a
+                    >
+                    <a
+                        href="https://wa.me/256703322015"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >WhatsApp <span aria-hidden="true">↗</span></a
+                    >
+                </div>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <a
+                class="footer-wordmark"
+                href="#home"
+                aria-label="Clinton Mugisha, back to top"
+                >CLINTON<span>.</span></a
+            >
+            <div class="footer-bottom">
+                <p>© <span data-year>2026</span> Clinton Mugisha</p>
                 <div>
-                    <h2 id="work-title">Built to solve.<br>Designed to stay.</h2>
-                    <p>A focused selection of products across logistics, AI, marketing, and commerce.</p>
+                    <a
+                        href="https://github.com/Clinton-mugisha"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >GitHub ↗</a
+                    ><a
+                        href="https://www.linkedin.com/in/mugisha-clinton-55972b271/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >LinkedIn ↗</a
+                    ><a href="#stack">Stack</a><a href="#about">About</a>
                 </div>
             </div>
-
-            <div class="featured-projects">
-                <article class="project-feature" data-project>
-                    <a class="project-media" href="https://ride-link.com/" target="_blank" rel="noopener noreferrer" aria-label="View the Ridelink website">
-                        <img src="images/optimized/ridel.webp" alt="Ridelink logistics website interface" width="1800" height="907" loading="lazy" decoding="async">
-                        <span class="project-visit" aria-hidden="true">Explore project</span>
-                        <span class="project-open" aria-hidden="true">↗</span>
-                    </a>
-                    <div class="project-copy">
-                        <div class="project-number">01</div>
-                        <div>
-                            <p class="project-type">Logistics / Web platform / 2026</p>
-                            <h3>Ridelink</h3>
-                            <p>A fast, search-friendly digital home for one of East Africa&rsquo;s growing logistics platforms — designed to make complex services feel simple.</p>
-                        </div>
-                        <ul class="project-tags" aria-label="Technologies used">
-                            <li>Next.js</li><li>GSAP</li><li>SEO</li><li>Motion</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="project-feature project-feature--reverse" data-project>
-                    <a class="project-media project-media--plum" href="http://marketingagent101.com" target="_blank" rel="noopener noreferrer" aria-label="View Marketing Agent 101">
-                        <img src="images/optimized/market.webp" alt="Marketing Agent 101 campaign platform interface" width="1800" height="892" loading="lazy" decoding="async">
-                        <span class="project-visit" aria-hidden="true">Explore project</span>
-                        <span class="project-open" aria-hidden="true">↗</span>
-                    </a>
-                    <div class="project-copy">
-                        <div class="project-number">02</div>
-                        <div>
-                            <p class="project-type">AI marketing / SaaS / 2026</p>
-                            <h3>Marketing Agent 101</h3>
-                            <p>An AI-powered campaign workspace that helps businesses plan and deliver smarter SMS and email marketing from one clear interface.</p>
-                        </div>
-                        <ul class="project-tags" aria-label="Technologies used">
-                            <li>Next.js</li><li>Ollama</li><li>AI</li><li>Automation</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="project-feature" data-project>
-                    <a class="project-media project-media--blue" href="http://ai.ride-link.com/" target="_blank" rel="noopener noreferrer" aria-label="View Adrian Logistics AI">
-                        <img src="images/optimized/adrian.webp" alt="Adrian Logistics AI assistant interface" width="1800" height="735" loading="lazy" decoding="async">
-                        <span class="project-visit" aria-hidden="true">Explore project</span>
-                        <span class="project-open" aria-hidden="true">↗</span>
-                    </a>
-                    <div class="project-copy">
-                        <div class="project-number">03</div>
-                        <div>
-                            <p class="project-type">Artificial intelligence / Logistics / 2026</p>
-                            <h3>Adrian AI</h3>
-                            <p>An intelligent logistics assistant for route planning, fleet decisions, and day-to-day operations — built around useful answers, not AI theatre.</p>
-                        </div>
-                        <ul class="project-tags" aria-label="Technologies used">
-                            <li>Next.js</li><li>Node.js</li><li>Firebase</li><li>MCP</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="project-feature project-feature--reverse" data-project>
-                    <a class="project-media project-media--sand" href="https://canary.ride-link.com/" target="_blank" rel="noopener noreferrer" aria-label="View the Ridelink operations platform">
-                        <img src="images/optimized/platform.webp" alt="Ridelink operations platform dashboard" width="1800" height="918" loading="lazy" decoding="async">
-                        <span class="project-visit" aria-hidden="true">Explore project</span>
-                        <span class="project-open" aria-hidden="true">↗</span>
-                    </a>
-                    <div class="project-copy">
-                        <div class="project-number">04</div>
-                        <div>
-                            <p class="project-type">Operations / Product design / 2025</p>
-                            <h3>Ridelink Platform</h3>
-                            <p>A comprehensive operations product that brings shipments, fleet coordination, and payments into a calmer, more capable workspace.</p>
-                        </div>
-                        <ul class="project-tags" aria-label="Technologies used">
-                            <li>Next.js</li><li>Firebase</li><li>Stripe</li><li>UX</li>
-                        </ul>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section class="archive-section" aria-labelledby="archive-title">
-            <div class="archive-heading">
-                <p class="section-kicker">More things I&rsquo;ve made</p>
-                <h2 id="archive-title">Project archive</h2>
-            </div>
-            <div class="project-archive">
-                <a class="archive-row" href="http://course-adviser.com/" target="_blank" rel="noopener noreferrer"><span class="archive-index">05</span><span class="archive-name">Course Adviser</span><span class="archive-category">Education / AI</span><span class="archive-year">2026</span><span class="archive-arrow">↗</span></a>
-                <a class="archive-row" href="https://tracking.ride-link.com/" target="_blank" rel="noopener noreferrer"><span class="archive-index">07</span><span class="archive-name">Package Tracking</span><span class="archive-category">Utility / Web app</span><span class="archive-year">2025</span><span class="archive-arrow">↗</span></a>
-                <a class="archive-row" href="https://tax.ride-link.com/" target="_blank" rel="noopener noreferrer"><span class="archive-index">08</span><span class="archive-name">Uganda Tax Calculator</span><span class="archive-category">Fintech / Utility</span><span class="archive-year">2025</span><span class="archive-arrow">↗</span></a>
-                <a class="archive-row" href="https://ecom-seven-lake.vercel.app/" target="_blank" rel="noopener noreferrer"><span class="archive-index">09</span><span class="archive-name">E-Commerce Platform</span><span class="archive-category">Commerce / Full-stack</span><span class="archive-year">2025</span><span class="archive-arrow">↗</span></a>
-                <a class="archive-row" href="https://www.fountconsult.com/" target="_blank" rel="noopener noreferrer"><span class="archive-index">10</span><span class="archive-name">Fount Consult</span><span class="archive-category">Consulting / Web</span><span class="archive-year">2024</span><span class="archive-arrow">↗</span></a>
-                <a class="archive-row" href="https://infinitytoursandtravel.vercel.app/" target="_blank" rel="noopener noreferrer"><span class="archive-index">11</span><span class="archive-name">Infinity Tours</span><span class="archive-category">Travel / Booking</span><span class="archive-year">2024</span><span class="archive-arrow">↗</span></a>
-                <a class="archive-row" href="https://play.google.com/store/apps/details?id=com.ridelink.app&hl=en" target="_blank" rel="noopener noreferrer"><span class="archive-index">12</span><span class="archive-name">Ridelink Mobile</span><span class="archive-category">Flutter / Mobile</span><span class="archive-year">2024</span><span class="archive-arrow">↗</span></a>
-            </div>
-        </section>
-
-        <section class="about-section" id="about" aria-labelledby="about-title">
-            <div class="about-heading">
-                <p class="section-kicker">02 / Profile</p>
-                <h2 id="about-title">Code brain.<br><span>Design eye.</span></h2>
-            </div>
-            <div class="about-grid">
-                <div class="about-statement">
-                    <p>I work across product strategy, interface design, and full-stack development. That means fewer gaps between the idea, the design, and the thing people actually use.</p>
-                    <p>For the past three years, I&rsquo;ve helped teams turn operational problems and early concepts into polished products — always with clarity, performance, and people at the centre.</p>
-                    <div class="about-actions">
-                        <a class="button button--light" href="mailto:mugishaclinton412@gmail.com">Start a conversation <span>↗</span></a>
-                        <a class="plain-link" href="https://www.linkedin.com/in/mugisha-clinton-55972b271/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-                    </div>
-                </div>
-                <div class="capabilities">
-                    <article><span>01</span><h3>Product design</h3><p>Research, user flows, wireframes, prototypes, and high-fidelity interface systems.</p></article>
-                    <article><span>02</span><h3>Web development</h3><p>Responsive, fast, accessible websites and applications built with modern frameworks.</p></article>
-                    <article><span>03</span><h3>Mobile products</h3><p>Cross-platform product experiences using Flutter and React Native.</p></article>
-                    <article><span>04</span><h3>AI integrations</h3><p>Useful AI workflows, assistants, and automations embedded into real products.</p></article>
-                </div>
-            </div>
-            <div class="toolkit" aria-label="Selected toolkit">
-                <p>Selected toolkit</p>
-                <div class="toolkit-list">
-                    <span>JavaScript</span><span>TypeScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>Python</span><span>Flutter</span><span>Firebase</span><span>PostgreSQL</span><span>Figma</span><span>GSAP</span><span>Docker</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact-section" id="contact" aria-labelledby="contact-title">
-            <div class="contact-top">
-                <p class="section-kicker">03 / Contact</p>
-                <p>Have a project in mind?</p>
-            </div>
-            <div class="contact-main">
-                <h2 id="contact-title">Let&rsquo;s make<br><span>something good.</span></h2>
-                <a class="contact-orb" href="mailto:mugishaclinton412@gmail.com" aria-label="Send Clinton an email">
-                    <img src="me.jpeg" alt="" width="1035" height="956" loading="lazy" decoding="async">
-                    <span class="contact-orb-shade" aria-hidden="true"></span>
-                    <span class="contact-orb-label">Get in touch</span>
-                    <span class="contact-orb-arrow" aria-hidden="true">↗</span>
-                </a>
-            </div>
-            <div class="contact-details">
-                <div><span>Email</span><a href="mailto:mugishaclinton412@gmail.com">mugishaclinton412@gmail.com</a></div>
-                <div><span>Phone / WhatsApp</span><a href="https://wa.me/256703322015" target="_blank" rel="noopener noreferrer">+256 703 322 015</a></div>
-                <div><span>Based in</span><p>Kampala, Uganda</p></div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <p>&copy; <span data-year>2026</span> Clinton Mugisha</p>
-        <div>
-            <a href="https://github.com/Clinton-mugisha" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-            <a href="https://www.linkedin.com/in/mugisha-clinton-55972b271/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-            <a href="#home">Back to top ↑</a>
-        </div>
-        <p>Designed &amp; built with intention.</p>
-    </footer>
-
-    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-    <script defer src="script.js"></script>
-</body>
+        </footer>
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"
+        ></script>
+        <script defer src="script.js"></script>
+    </body>
 </html>
