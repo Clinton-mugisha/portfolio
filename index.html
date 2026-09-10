@@ -26,7 +26,7 @@
         <link rel="shortcut icon" type="image/png" href="logo1.png" />
         <link
             rel="stylesheet"
-            href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css"
+            href="fonts/icons.css"
         />
         <link rel="stylesheet" href="styles_homepage.css" />
         <link
@@ -43,7 +43,7 @@
             <a class="brand" href="#home" aria-label="Clinton Mugisha, home"
                 >clinton<span>.</span></a
             >
-            <nav aria-label="Main navigation">
+            <nav class="desktop-nav" aria-label="Main navigation">
                 <a href="#work">Work</a>
                 <a class="nav-about" href="#about">About</a>
                 <a class="nav-stack" href="#stack">Stack</a>
@@ -51,7 +51,43 @@
                     >Let’s talk <span aria-hidden="true">↗</span></a
                 >
             </nav>
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+                hidden
+            >
+                <span></span><span></span>
+            </button>
         </header>
+        <dialog class="mobile-menu" id="mobile-menu" aria-label="Navigation">
+            <div class="mobile-menu-top">
+                <a class="brand" href="#home">clinton<span>.</span></a
+                ><button
+                    class="menu-close"
+                    type="button"
+                    aria-label="Close menu"
+                    autofocus
+                >
+                    <span></span><span></span>
+                </button>
+            </div>
+            <nav aria-label="Mobile navigation">
+                <a href="#work">THE WORK<span aria-hidden="true">↗</span></a>
+                <a href="#about">ABOUT ME<span aria-hidden="true">↗</span></a>
+                <a href="#stack">MY STACK<span aria-hidden="true">↗</span></a>
+                <a href="#contact"
+                    >LET’S TALK<span aria-hidden="true">↗</span></a
+                >
+            </nav>
+            <a
+                class="mobile-menu-email"
+                href="mailto:mugishaclinton412@gmail.com"
+                >mugishaclinton412@gmail.com ↗</a
+            >
+        </dialog>
         <main id="main">
             <section class="hero" id="home" aria-labelledby="hero-title">
                 <div class="hero-heading">
@@ -646,6 +682,10 @@
         <script
             defer
             src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"
+        ></script>
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"
         ></script>
         <script defer src="script.js"></script>
     </body>

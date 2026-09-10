@@ -1,0 +1,14 @@
+/* Devicon v2.16.0 — only the 11 icons used here. MIT: devicon-LICENSE.txt. */
+@font-face { font-family: 'devicon'; src: url('devicon-subset.woff2') format('woff2'); font-style: normal; font-weight: normal; font-display: block; }
+[class^='devicon-'], [class*=' devicon-'] { font-family: 'devicon' !important; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; }
+.devicon-docker-plain::before { content: "\e9c3"; }
+.devicon-figma-plain::before { content: "\e9f9"; }
+.devicon-firebase-plain::before { content: "\ea00"; }
+.devicon-flutter-plain::before { content: "\ea06"; }
+.devicon-javascript-plain::before { content: "\ea81"; }
+.devicon-nextjs-plain::before { content: "\eb14"; }
+.devicon-nodejs-plain::before { content: "\eb24"; }
+.devicon-postgresql-plain::before { content: "\eb79"; }
+.devicon-python-plain::before { content: "\eb9c"; }
+.devicon-react-original::before { content: "\ebbc"; }
+.devicon-typescript-plain::before { content: "\ec63"; }
