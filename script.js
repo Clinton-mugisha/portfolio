@@ -25,11 +25,32 @@
             window.requestAnimationFrame(() => window.ScrollTrigger?.refresh());
         });
         menu.querySelectorAll('a[href^="#"]').forEach((link) => {
-            link.addEventListener('click', () => {
-                menu.close();
+            link.addEventListener('click', (event) => {
                 const target = document.querySelector(link.hash);
-                target?.setAttribute('tabindex', '-1');
-                target?.focus({ preventScroll: true });
+                if (!target) return;
+
+                // Mobile browsers can lose the anchor jump when a modal dialog
+                // closes during the same click. Close first, then navigate once
+                // the body's scroll lock has been removed.
+                event.preventDefault();
+                menu.addEventListener(
+                    'close',
+                    () => {
+                        window.requestAnimationFrame(() => {
+                            if (window.location.hash !== link.hash) {
+                                window.history.pushState(null, '', link.hash);
+                            }
+                            target.setAttribute('tabindex', '-1');
+                            target.focus({ preventScroll: true });
+                            target.scrollIntoView({
+                                behavior: motionPreference.matches ? 'auto' : 'smooth',
+                                block: 'start',
+                            });
+                        });
+                    },
+                    { once: true },
+                );
+                menu.close();
             });
         });
         desktop.addEventListener('change', ({ matches }) => {
